@@ -17,7 +17,7 @@ We are a small, friendly club of around 25 members with players of all standards
 
 Note the club is closed on bank holidays and throughout July and August.
 
-## Competitive Chess 
+## Competitive Chess
 
 We offer competitive chess for all standards:
 
@@ -32,7 +32,7 @@ More details including competition rules can be found on the [E2E4 Chess Results
 
 Although we don't have any dedicated coaches within the club, we are happy to analyse games and offer advice playing friendly games.
 
-## Juniors 
+## Juniors
 
 We don't have a dedicated Juniors club but welcome players of high-school age to the club, provided they are accompanied by a parent or guardian.
 

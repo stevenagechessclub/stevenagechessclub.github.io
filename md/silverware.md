@@ -3,7 +3,7 @@
 ## Club Player of the Year
 
 The Player of the Year is awarded to the Stevenage player with the best overall performance in the season:
-- Only graded games count, i.e. all Herts County Association and Herts & District games 
+- Only graded games count, i.e. all Herts County Association and Herts & District games
 - A minimum of 8 games must have been played to qualify as agreed in the 2021 AGM
 
 Previous winners are:
@@ -87,7 +87,7 @@ Past record:
 - 2014: Division 4 Champions
 - 2011: Division 2 and Division 6 Champions
 - 2010: Division 4 Champions
-- 2009: Division 2 Champions 
+- 2009: Division 2 Champions
 - 2008: Division 5 and Division 7 Champions
 - 2005: Division 6 Champions
 
@@ -138,11 +138,11 @@ The Herts & District Jamboree is a competition with a classical time control but
 
 Stevenage have won the tournament in the following seasons:
 - 2024 Joint winners with Welwyn Hatfield
-- 2015 
+- 2015
 - 2013 Joint winners with Hemel Hempstead
-- 2008 
-- 2002 
-- 1997 
+- 2008
+- 2002
+- 1997
 - 1993 As Pin Green
 - 1988 As Pin Green
 - 1982 As Pin Green
@@ -163,7 +163,7 @@ Stevenage have won the Herts & District league in the following seasons:
 - 2010
 - 2009
 - 2008
- 
+
 ## Field Trophy
 
 The Field Trophy is a friendly competition between Stevenage and Letchworth & Hitchin:
