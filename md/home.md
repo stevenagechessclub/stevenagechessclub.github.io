@@ -28,6 +28,8 @@ We offer competitive chess for all standards:
 
 More details including competition rules can be found on the [E2E4 Chess Results & Grading](https://www.e2-e4.co.uk/chess-results/) website.
 
+Herts Division 1 is extremely competitive and has several titled players, e.g. 1 GM and several IM and FMs. Any strong players are more than welcome to join our 1st team for a challenge.
+
 ## Coaching
 
 Although we don't have any dedicated coaches within the club, we are happy to analyse games and offer advice playing friendly games.
