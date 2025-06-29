@@ -40,4 +40,4 @@ We don't have a dedicated Juniors club but welcome players of high-school age to
 
 The closest deciated Junior club is [Letchworth Junior Chess and Go Club](https://letchworthandhitchinchess.club/letchworth-junior-chess-and-go-club/)
 
-There's some general information around junior clubs on the [Herts Chess](https://hertschess.com/juniors/) website.
+There's some general information about junior clubs on the [Herts Chess](https://hertschess.com/juniors/) website.
