@@ -8,9 +8,13 @@ Welcome to Stevenage Chess Club. Whether you're a beginner looking to learn the 
 
 We are a small, friendly club of around 25 members with players of all standards from beginners to advanced players over 2000 ELO.
 
+We play on Monday night's at the Stevenage United Reformed Church, SG1 1UL.
+
+For more information, please email stevenage-chess-club@googlegroups.com and one of our club officers will respond.
+
 ## What We Offer
 
-- **Weekly club nights** every Monday at 7.30 PM for friendly games
+- **Weekly club nights** every Monday from 7.30 PM to 10.30 PM for friendly or competitive games
 - **Competitive chess** in the Hertfordshire league with games graded by the English Chess Federation
 - An annual club **blitz tournament** typically held near Christmas
 - An annual friendly match against our neighbours Letchworth & Hitchin chess club for the **Field trophy**
