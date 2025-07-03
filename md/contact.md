@@ -29,10 +29,11 @@ The chess club can be found in The Annexe on the right as you enter the car park
 ## Club Officers
 
 - **President**: Mike Price
-- **Secretary**: Dominic Robinson
 - **Vice President**: Ken Maynard
+- **Secretary**: Dominic Robinson
 - **Treasurer**: Mike Price
 - **1st Team Captain**: Dominic Robinson
 - **2nd Team Captain**: Mike Price
-- **3rd Team Captain**: Mike Price
+- **3rd Team Captain**: Ernie Bradwell
+- **U1600 Captain**: Andy Karn
 - **Herts & District Captain**: Dominic Robinson
