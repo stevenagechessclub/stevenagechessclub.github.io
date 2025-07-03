@@ -3,8 +3,8 @@
 There's no initial charges for new members, simply turn up at the club on a Monday night to see if you like it.
 
 To play at the club regularly, please join the club to help cover our expenses. The current fees are:
-- **£50/year** for those in full time work</li>
-- **£30/year** if you are retired or unemployed</li>
+- **£60/year** for those in full time work</li>
+- **£40/year** if you are retired or unemployed</li>
 - **£20/year** if you are in education and over 18</li>
 - No charge for those under 18
 
