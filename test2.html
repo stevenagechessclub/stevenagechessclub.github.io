@@ -234,22 +234,6 @@
             border-left: 4px solid #e74c3c;
         }
 
-        .retry-button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 1rem;
-            font-size: 1rem;
-            transition: background 0.3s ease;
-        }
-
-        .retry-button:hover {
-            background: #2980b9;
-        }
-
         @media (max-width: 768px) {
             .sidebar {
                 width: 100%;
@@ -367,11 +351,11 @@
     <script>
         // Sample markdown content - replace with your actual content
         const markdownContent = {
-            'home': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/home.md', 
-            'members': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/membership.md',
-            'silverware': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/silverware.md',
-            'policy': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/policy.md',
-            'contact': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/contact.md'
+            'home': '/md/home.md', 
+            'members': '/md/membership.md',
+            'silverware': '/md/silverware.md',
+            'policy': '/md/policy.md',
+            'contact': '/md/contact.md'
         };
 
         const navItems = [
@@ -383,8 +367,6 @@
         ];
 
         let currentPage = 'home';
-        let retryCount = 0;
-        const MAX_RETRIES = 3;
 
         function initializeNavigation() {
             const navMenu = document.getElementById('nav-menu');
@@ -414,94 +396,9 @@
             });
         }
 
-        // Enhanced fetch function with Edge compatibility fixes
-        async function fetchWithRetry(url, options = {}, retries = MAX_RETRIES) {
-            for (let i = 0; i <= retries; i++) {
-                try {
-                    // Add cache-busting and Edge-specific headers
-                    const cacheBuster = Date.now() + Math.random();
-                    const urlWithCache = `${url}${url.includes('?') ? '&' : '?'}v=${cacheBuster}`;
-                    
-                    // Create AbortController for timeout
-                    const controller = new AbortController();
-                    const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
-                    
-                    const response = await fetch(urlWithCache, {
-                        method: 'GET',
-                        headers: {
-                            'Cache-Control': 'no-cache, no-store, must-revalidate',
-                            'Pragma': 'no-cache',
-                            'Expires': '0',
-                            'Accept': 'text/plain, text/markdown, text/*, */*',
-                            ...options.headers
-                        },
-                        cache: 'no-store', // Force no caching
-                        mode: 'cors', // Explicit CORS mode
-                        credentials: 'omit', // Don't send credentials
-                        signal: controller.signal,
-                        ...options
-                    });
-                    
-                    clearTimeout(timeoutId);
-                    
-                    if (!response.ok) {
-                        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
-                    }
-                    
-                    return response;
-                } catch (error) {
-                    console.log(`Attempt ${i + 1} failed:`, error.message);
-                    
-                    if (i === retries) {
-                        throw error;
-                    }
-                    
-                    // Wait before retrying (exponential backoff)
-                    const delay = Math.min(1000 * Math.pow(2, i), 5000);
-                    await new Promise(resolve => setTimeout(resolve, delay));
-                }
-            }
-        }
-
-        // Fallback function using XMLHttpRequest for older Edge versions
-        function fetchFallback(url) {
-            return new Promise((resolve, reject) => {
-                const xhr = new XMLHttpRequest();
-                const cacheBuster = Date.now() + Math.random();
-                const urlWithCache = `${url}${url.includes('?') ? '&' : '?'}v=${cacheBuster}`;
-                
-                xhr.timeout = 15000; // 15 second timeout
-                
-                xhr.onreadystatechange = function() {
-                    if (xhr.readyState === 4) {
-                        if (xhr.status >= 200 && xhr.status < 300) {
-                            resolve({
-                                ok: true,
-                                status: xhr.status,
-                                text: () => Promise.resolve(xhr.responseText)
-                            });
-                        } else {
-                            reject(new Error(`HTTP ${xhr.status}: ${xhr.statusText}`));
-                        }
-                    }
-                };
-                
-                xhr.onerror = () => reject(new Error('Network error'));
-                xhr.ontimeout = () => reject(new Error('Request timeout'));
-                
-                xhr.open('GET', urlWithCache, true);
-                xhr.setRequestHeader('Cache-Control', 'no-cache');
-                xhr.setRequestHeader('Pragma', 'no-cache');
-                xhr.send();
-            });
-        }
-
         async function loadPage(pageId) {
             const content = document.getElementById('content');
             const navLinks = document.querySelectorAll('.nav-link');
-            
-            // Show loading state
-            content.innerHTML = '<div class="loading">Loading content...</div>';
             
             // Update active navigation
             navLinks.forEach(link => {
@@ -514,81 +411,38 @@
             // Load content
             if (markdownContent[pageId]) {
                 try {
-                    let response;
-                    
-                    // Try modern fetch first, then fallback to XMLHttpRequest
-                    if (typeof fetch !== 'undefined' && typeof AbortController !== 'undefined') {
-                        response = await fetchWithRetry(markdownContent[pageId]);
-                    } else {
-                        response = await fetchFallback(markdownContent[pageId]);
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 15000);
+                    const markdownContentResponse = await fetch(markdownContent[pageId], {
+                        method: 'GET',
+                        headers: {
+                            'Cache-Control': 'no-cache, no-store, must-revalidate',
+                            'Pragma': 'no-cache',
+                            'Expires': '0',
+                            'Accept': 'text/plain, text/markdown, text/*, */*'
+                        },
+                        cache: 'no-store',
+                        mode: 'cors',
+                        credentials: 'omit',
+                        signal: controller.signal
+                    });
+                    clearTimeout(timeoutId);
+
+                    if (!markdownContentResponse.ok) {
+                        throw new Error(`HTTP error! status: ${markdownContentResponse.status}`);
                     }
-                    
-                    const markdownText = await response.text();
-                    
-                    // Validate that we got actual content
-                    if (!markdownText || markdownText.trim().length === 0) {
-                        throw new Error('Empty response received');
-                    }
-                    
-                    const html = marked.parse(markdownText);
+                    const markdownContentText = await markdownContentResponse.text();
+                    const html = marked.parse(markdownContentText);
                     content.innerHTML = html;
                     currentPage = pageId;
-                    retryCount = 0; // Reset retry count on success
                     
                     // Smooth scroll to top
                     window.scrollTo({ top: 0, behavior: 'smooth' });
-                    
                 } catch (error) {
-                    console.error('Load page error:', error);
-                    showError(error, pageId);
+                    content.innerHTML = `<div class="error">Error loading content: ${error.message}</div>`;
                 }
             } else {
                 content.innerHTML = '<div class="error">Page not found.</div>';
-            }
-        }
-
-        function showError(error, pageId) {
-            const content = document.getElementById('content');
-            let errorMessage = 'Unknown error occurred';
-            
-            if (error.name === 'AbortError') {
-                errorMessage = 'Request timed out. Please check your connection.';
-            } else if (error.message.includes('Failed to fetch')) {
-                errorMessage = 'Network error. Please check your internet connection.';
-            } else if (error.message.includes('HTTP')) {
-                errorMessage = `Server error: ${error.message}`;
-            } else {
-                errorMessage = error.message;
-            }
-            
-            content.innerHTML = `
-                <div class="error">
-                    <strong>Error loading content:</strong> ${errorMessage}
-                    <br><br>
-                    <button class="retry-button" onclick="retryLoadPage('${pageId}')">
-                        Try Again
-                    </button>
-                </div>
-            `;
-        }
-
-        function retryLoadPage(pageId) {
-            retryCount++;
-            if (retryCount <= MAX_RETRIES) {
-                loadPage(pageId);
-            } else {
-                const content = document.getElementById('content');
-                content.innerHTML = `
-                    <div class="error">
-                        <strong>Unable to load content after multiple attempts.</strong>
-                        <br><br>
-                        Please check your internet connection and try refreshing the page.
-                        <br><br>
-                        <button class="retry-button" onclick="window.location.reload()">
-                            Refresh Page
-                        </button>
-                    </div>
-                `;
             }
         }
 
@@ -640,23 +494,6 @@
             const newURL = `${window.location.pathname}#${pageId}`;
             history.pushState({ page: pageId }, '', newURL);
         }
-
-        // Global error handler for unhandled promise rejections
-        window.addEventListener('unhandledrejection', function(event) {
-            console.error('Unhandled promise rejection:', event.reason);
-            const content = document.getElementById('content');
-            if (content && content.innerHTML.includes('Loading content...')) {
-                content.innerHTML = `
-                    <div class="error">
-                        An unexpected error occurred while loading content.
-                        <br><br>
-                        <button class="retry-button" onclick="window.location.reload()">
-                            Refresh Page
-                        </button>
-                    </div>
-                `;
-            }
-        });
     </script>
 </body>
 </html>
