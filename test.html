@@ -351,17 +351,19 @@
     <script>
         // Sample markdown content - replace with your actual content
         const markdownContent = {
-            'home': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/home.md', 
-            'members': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/membership.md',
-            'silverware': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/silverware.md',
-            'policy': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/policy.md',
-            'contact': 'https://raw.githubusercontent.com/stevenagechessclub/stevenagechessclub.github.io/main/md/contact.md'
+            'home': '/md/home.md', 
+            'members': '/md/membership.md',
+            'silverware': '/md/silverware.md',
+            'history': '/md/history.md',
+            'policy': '/md/policy.md',
+            'contact': '/md/contact.md'
         };
 
         const navItems = [
             { id: 'home', title: 'Home', icon: '🏠' },
             { id: 'members', title: 'Membership', icon: '👥' },
             { id: 'silverware', title: 'Silverware', icon: '🏆' },
+            { id: 'history', title: 'Club History', icon: '📖' },
             { id: 'policy', title: 'Privacy Policy', icon: '🛡️' },
             { id: 'contact', title: 'Contact', icon: '📞' }
         ];
@@ -411,7 +413,23 @@
             // Load content
             if (markdownContent[pageId]) {
                 try {
-                    const markdownContentResponse = await fetch(markdownContent[pageId]);
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 15000);
+                    const markdownContentResponse = await fetch(markdownContent[pageId], {
+                        method: 'GET',
+                        headers: {
+                            'Cache-Control': 'no-cache, no-store, must-revalidate',
+                            'Pragma': 'no-cache',
+                            'Expires': '0',
+                            'Accept': 'text/plain, text/markdown, text/*, */*'
+                        },
+                        cache: 'no-store',
+                        mode: 'cors',
+                        credentials: 'omit',
+                        signal: controller.signal
+                    });
+                    clearTimeout(timeoutId);
+
                     if (!markdownContentResponse.ok) {
                         throw new Error(`HTTP error! status: ${markdownContentResponse.status}`);
                     }
