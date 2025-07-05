@@ -10,6 +10,8 @@ We are a small, friendly club of around 25 members with players of all standards
 
 We play on Monday night's at the Stevenage United Reformed Church, SG1 1UL.
 
+We compete in Hertfordshire chess leagues and knockout tournaments. The season runs from September through to June.
+
 For more information, please email stevenage-chess-club@googlegroups.com and one of our club officers will respond.
 
 ## What We Offer
@@ -23,8 +25,9 @@ Note the club is closed on bank holidays and throughout July and August.
 
 ## Competitive Chess
 
-We offer competitive chess for all standards:
+We offer competitive chess for all standards. The season runs from September to June:
 
+- **Herts U1600 Division** for beginner players of any standard
 - **Herts Division 6** for beginner players of any standard
 - **Herts Division 4** for intermediate players approximately between 1500 and 1800 ELO
 - **Herts Division 1** for players over 1800 ELO
@@ -33,6 +36,12 @@ We offer competitive chess for all standards:
 More details including competition rules can be found on the [E2E4 Chess Results & Grading](https://www.e2-e4.co.uk/chess-results/) website.
 
 Herts Division 1 is extremely competitive and has several titled players, e.g. 1 GM and several IM and FMs. Any strong players are more than welcome to join our 1st team for a challenge.
+
+## New Members
+
+Please feel free to come along on a Monday night. There's no committment, you can try the club for a few weeks to see if it's right for you.
+
+Sometimes we have visiting clubs and it can be quite busy, so please do make yourself known as you arrive and we can arrange a friendly game for you. Or let us know in advance by emailing stevenage-chess-club@googlegroups.com and we'll keep an eye out for you.
 
 ## Coaching
 

@@ -3,7 +3,7 @@
 ## Club Player of the Year
 
 The Player of the Year is awarded to the Stevenage player with the best overall performance in the season:
-- Only graded games count, i.e. all Herts County Association and Herts & District games
+- Only standard time control games count
 - A minimum of 8 games must have been played to qualify as agreed in the 2021 AGM
 
 Previous winners are:
