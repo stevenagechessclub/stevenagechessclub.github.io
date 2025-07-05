@@ -1,6 +1,6 @@
 # Stevenage Chess Club Website
 
-## Introduction
+## Introduction
 
 The Stevenage Chess Club website is designed to be a low maintenance website
 which club members can easily update.
@@ -15,7 +15,10 @@ using the following prompts:
 > This should convert markdown based content into a website.
 > Improve the website so it displays correctly on a mobile phone.
 
-## Instructions for Club Members
+Ideally, the stevenagechessclub github org should have at least 2 members to ensure
+the club doesn't lose access to the site.
+
+## Instructions for Club Members
 
 1. Create a github Account
 
@@ -29,16 +32,12 @@ github username with the Club Website Administrator and they will add you to the
 [stevenagechessclub](https://github.com/orgs/stevenagechessclub/people)
 github organisation.
 
-**Important** Ideally, the stevenagechessclub github org should have at least 2 club members to ensure
-we don't lose access.
-
 3. Edit the website
 
 The website is built from simple markdown text files.
 
 For more information on markdown and the syntax, See:
-- https://www.markdownguide.org/getting-started/ for
-https://en.wikipedia.org/wiki/Markdown for a history of markdown
+- https://www.markdownguide.org/getting-started/ for an introduction
 - https://www.markdownguide.org/basic-syntax/ for a syntax guide
 
 To make changes to the website, first [sign in](https://github.com/login) to github if you haven't already
@@ -50,12 +49,22 @@ done so. Then open the relevant markdown file using the links below:
 - [policy.md](https://github.com/stevenagechessclub/stevenagechessclub.github.io/blob/main/md/policy.md) for the Privacy Policy page
 - [contact.md](https://github.com/stevenagechessclub/stevenagechessclub.github.io/blob/main/md/contact.md) for the Contact page
 
-Click the github pen found towards the top-right of the screen ![Github Pen](/images/github-pen.png)
+Click the github pen found towards the top-right of the screen
 
-Make any necessary edits. Check your changes by toggling the Edit/Preview button ![Edit / Preview toggle](/images/github-edit-preview-toggle.png)
+![Github Pen](/images/github-pen.png)
 
-Once you are happy with your changes, click the commit button ![Commit](/images/github-commit.png)
+Make any necessary edits. Check your changes by toggling the Edit/Preview button
 
-Update the commit message and ensure "Commit directly to `main` branch" is selected. Click Commit Changes. ![Commit Changes](/images/github-commit-changes.png)
+![Edit / Preview toggle](/images/github-edit-preview-toggle.png)
+
+Once you are happy with your changes, click the commit button
+
+![Commit](/images/github-commit.png)
+
+Update the commit message and ensure "Commit directly to `main` branch" is selected. Click Commit Changes.
+
+![Commit Changes](/images/github-commit-changes.png)
 
 The change will now deploy to the website in around 30 seconds. You can see progress [here](https://github.com/stevenagechessclub/stevenagechessclub.github.io/actions)
+
+Double-check the website is as expected. [stevenage-chess-club.co.uk](https://stevenage-chess-club.co.uk)
