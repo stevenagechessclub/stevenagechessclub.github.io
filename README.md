@@ -9,7 +9,7 @@ It's hosted for free on GitHub Pages. The only cost is for the
 [stevenage-chess-club.co.uk](https://stevenage-chess-club.co.uk) domain name
 purchased through https://123-reg.co.uk
 
-The website was initially generated using [Claude AI)(https://claude.ai)
+The website was initially generated using [Claude AI](https://claude.ai)
 using the following prompts:
 > I'd like to create a simple website for a chess club with a side menu hosted on GitHub pages.
 > This should convert markdown based content into a website.
