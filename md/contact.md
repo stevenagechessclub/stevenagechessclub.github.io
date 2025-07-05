@@ -2,7 +2,7 @@
 
 Get in touch with our chess club - we'd love to hear from you!
 
-Please email stevenage-chess-club@googlegroups.com and one of our club officers will respond.
+Please email <stevenage-chess-club@googlegroups.com> and one of our club officers will respond.
 
 ## Address
 
