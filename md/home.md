@@ -39,7 +39,7 @@ Herts Division 1 is extremely competitive and has several titled players, e.g. 1
 
 ## New Members
 
-Please feel free to come along on a Monday night. There's no committment, you can try the club for a few weeks to see if it's right for you.
+Please feel free to come along on a Monday night. There's no commitment, you can try the club for a few weeks to see if it's right for you.
 
 Sometimes we have visiting clubs and it can be quite busy, so please do make yourself known as you arrive and we can arrange a friendly game for you. Or let us know in advance by emailing stevenage-chess-club@googlegroups.com and we'll keep an eye out for you.
 
