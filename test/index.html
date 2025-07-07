@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stevenage Chess Club</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="scripts/marked.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            width: 280px;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 2rem 0;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+            position: fixed;
+            height: 100vh;
+            overflow-y: auto;
+            z-index: 1000;
+            transform: translateX(-100%);
+            transition: transform 0.3s ease;
+        }
+
+        .sidebar.open {
+            transform: translateX(0);
+        }
+
+        .sidebar h1 {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+            color: #ecf0f1;
+            padding: 0 1rem;
+        }
+
+        .nav-menu {
+            list-style: none;
+        }
+
+        .nav-item {
+            margin-bottom: 0.5rem;
+        }
+
+        .nav-link {
+            display: block;
+            padding: 0.8rem 2rem;
+            color: #bdc3c7;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border-left: 3px solid transparent;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border-left-color: #3498db;
+            transform: translateX(5px);
+        }
+
+        .main-content {
+            flex: 1;
+            margin-left: 280px;
+            padding: 2rem;
+            background: white;
+            min-height: 100vh;
+            animation: fadeIn 0.5s ease-in;
+            transition: margin-left 0.3s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .content-area {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        .mobile-header {
+            display: none;
+            background: linear-gradient(135deg, #2c3e50, #34495e);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1001;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .mobile-header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .mobile-header h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .menu-toggle:hover {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        .content-area h1 {
+            color: #2c3e50;
+            border-bottom: 3px solid #3498db;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .content-area h2 {
+            color: #34495e;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-area h3 {
+            color: #7f8c8d;
+            margin-top: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .content-area p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .content-area ul, .content-area ol {
+            margin-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .content-area li {
+            margin-bottom: 0.5rem;
+        }
+
+        .content-area blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 1rem;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #7f8c8d;
+        }
+
+        .content-area code {
+            background: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+
+        .content-area pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 1rem;
+            border-radius: 5px;
+            overflow-x: auto;
+            margin: 1rem 0;
+        }
+
+        .content-area pre code {
+            background: none;
+            color: inherit;
+            padding: 0;
+        }
+
+        .loading {
+            text-align: center;
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
+        .error {
+            color: #e74c3c;
+            background: #fdf2f2;
+            padding: 1rem;
+            border-radius: 5px;
+            border-left: 4px solid #e74c3c;
+        }
+
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                max-width: 320px;
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.open {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+                padding: 1rem;
+                padding-top: 5rem;
+            }
+            
+            .mobile-header {
+                display: block;
+            }
+            
+            .content-area {
+                padding: 1.5rem;
+                margin: 0;
+                border-radius: 8px;
+            }
+            
+            .content-area h1 {
+                font-size: 1.8rem;
+            }
+            
+            .content-area h2 {
+                font-size: 1.5rem;
+            }
+            
+            .content-area h3 {
+                font-size: 1.3rem;
+            }
+            
+            .content-area p {
+                text-align: left;
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            .nav-link {
+                padding: 1rem 2rem;
+                font-size: 1.1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .content-area {
+                padding: 1rem;
+            }
+            
+            .content-area h1 {
+                font-size: 1.6rem;
+            }
+            
+            .content-area h2 {
+                font-size: 1.4rem;
+            }
+            
+            .content-area h3 {
+                font-size: 1.2rem;
+            }
+            
+            .main-content {
+                padding: 0.5rem;
+                padding-top: 5rem;
+            }
+        }
+
+        @media (min-width: 769px) {
+            .sidebar {
+                transform: translateX(0);
+            }
+            
+            .mobile-header {
+                display: none;
+            }
+            
+            .overlay {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="mobile-header">
+            <div class="mobile-header-content">
+                <h1>♔ Stevenage Chess Club</h1>
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+            </div>
+        </div>
+
+        <div class="overlay" id="overlay"></div>
+        
+        <nav class="sidebar" id="sidebar">
+            <h1>♔ Stevenage Chess Club</h1>
+            <ul class="nav-menu" id="nav-menu">
+                <!-- Navigation items will be populated by JavaScript -->
+            </ul>
+        </nav>
+
+        <main class="main-content">
+            <div class="content-area" id="content">
+                <div class="loading">Loading content...</div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Sample markdown content - replace with your actual content
+        const markdownContent = {
+            'home': 'md/home.md', 
+            'members': 'md/membership.md',
+            'silverware': 'md/silverware.md',
+            'history': 'md/history.md',
+            'policy': 'md/policy.md',
+            'contact': 'md/contact.md'
+        };
+
+        const navItems = [
+            { id: 'home', title: 'Home', icon: '🏠' },
+            { id: 'members', title: 'Membership', icon: '👥' },
+            { id: 'silverware', title: 'Silverware', icon: '🏆' },
+            { id: 'history', title: 'Club History', icon: '📖' },
+            { id: 'policy', title: 'Privacy Policy', icon: '🛡️' },
+            { id: 'contact', title: 'Contact', icon: '📞' }
+        ];
+
+        let currentPage = 'home';
+
+        function initializeNavigation() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.innerHTML = '';
+
+            navItems.forEach(item => {
+                const li = document.createElement('li');
+                li.className = 'nav-item';
+                
+                const a = document.createElement('a');
+                a.href = '#';
+                a.className = 'nav-link';
+                a.dataset.page = item.id;
+                a.innerHTML = `${item.icon} ${item.title}`;
+                
+                if (item.id === currentPage) {
+                    a.classList.add('active');
+                }
+                
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    loadPage(item.id);
+                });
+                
+                li.appendChild(a);
+                navMenu.appendChild(li);
+            });
+        }
+
+        async function loadPage(pageId) {
+            const content = document.getElementById('content');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            // Update active navigation
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.dataset.page === pageId) {
+                    link.classList.add('active');
+                }
+            });
+            
+            // Load content
+            if (markdownContent[pageId]) {
+                try {
+                    const controller = new AbortController();
+                    const timeoutId = setTimeout(() => controller.abort(), 15000);
+                    const markdownContentResponse = await fetch(markdownContent[pageId], {
+                        method: 'GET',
+                        headers: {
+                            'Cache-Control': 'no-cache, no-store, must-revalidate',
+                            'Pragma': 'no-cache',
+                            'Expires': '0',
+                            'Accept': 'text/plain, text/markdown, text/*, */*'
+                        },
+                        cache: 'no-store',
+                        mode: 'cors',
+                        credentials: 'omit',
+                        signal: controller.signal
+                    });
+                    clearTimeout(timeoutId);
+
+                    if (!markdownContentResponse.ok) {
+                        throw new Error(`HTTP error! status: ${markdownContentResponse.status}`);
+                    }
+                    const markdownContentText = await markdownContentResponse.text();
+                    const html = marked.parse(markdownContentText);
+                    content.innerHTML = html;
+                    currentPage = pageId;
+                    
+                    // Smooth scroll to top
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } catch (error) {
+                    content.innerHTML = `<div class="error">Error loading content: ${error.message}</div>`;
+                }
+            } else {
+                content.innerHTML = '<div class="error">Page not found.</div>';
+            }
+        }
+
+        // Initialize the application
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeNavigation();
+            loadPage('home');
+            initializeMobileMenu();
+        });
+
+        function initializeMobileMenu() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            
+            menuToggle.addEventListener('click', () => {
+                sidebar.classList.toggle('open');
+                overlay.classList.toggle('active');
+                document.body.style.overflow = sidebar.classList.contains('open') ? 'hidden' : '';
+            });
+            
+            overlay.addEventListener('click', () => {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            });
+            
+            // Close menu when a navigation link is clicked on mobile
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    if (window.innerWidth <= 768) {
+                        sidebar.classList.remove('open');
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    }
+                });
+            });
+        }
+
+        // Handle browser back/forward buttons
+        window.addEventListener('popstate', (e) => {
+            const page = e.state?.page || 'home';
+            loadPage(page);
+        });
+
+        // Update URL when navigating (optional)
+        function updateURL(pageId) {
+            const newURL = `${window.location.pathname}#${pageId}`;
+            history.pushState({ page: pageId }, '', newURL);
+        }
+    </script>
+</body>
+</html>
