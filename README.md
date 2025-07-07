@@ -99,7 +99,7 @@ Update the commit message, select "Create a new branch" and enter a descriptive 
 
 ![Propose Changes](/images/github-commit-changes-branch.png)
 
-Update the description and Click "New Pull Request"
+Update the description and Click "Create pull request"
 
 ![Create PR](/images/github-create-pr.png)
 
