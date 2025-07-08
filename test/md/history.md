@@ -6,7 +6,7 @@ If old members want to contribute further, we'd love to hear from you. Please em
 
 ## Overview
 
-- Stevenage Chess Club formed in 1959 when it first appears in the [Hertfordshire Chess Association Year Book 1959-1960] (https://e2-e4.co.uk/Herts-Mag/1959-60.pdf)
+- Stevenage Chess Club is thought to have been formed in 1959. The club first appears in the Hertfordshire Chess Year Book in the [1959-1960 edition](https://e2-e4.co.uk/Herts-Mag/1959-60.pdf)
 - The original venue was the offices of the Stevenage Development Corporation, Daneshill House, Stevenage
 - Prior to Stevenage Chess Club being formed, there were other clubs in the area. One called Aston House met at the now demolished [Aston House](https://en.wikipedia.org/wiki/Aston_House) and [English Electric](https://en.wikipedia.org/wiki/English_Electric) had a club in Bragbury End.
 - The first silverware Stevenage won was Hertfordshire's oldest chess trophy, the Puller Cup, in 1960
@@ -14,8 +14,8 @@ If old members want to contribute further, we'd love to hear from you. Please em
   > Not content that their First team should win the League, Stevenage Second team were runners up. The Greeks had a word for this - Autocracy
 - The club moved to Stevenage College of Further Education in 1961
 - Throughout the 1960s and 1970s, the club was very successful winning the Hertfordshire Club Championship, the Puller Cup, several times
-- In 1975, the club moved to the the "Times Club" in London Road
-- In 1977, a second Stevenage club was formed that met in the Pyramid Pub in The Oval, Pin Green
+- In 1975, the club moved to the "Times Club" in London Road
+- In 1977, a second Stevenage club, Pin Green, was formed that met in the Pyramid Pub in The Oval, Pin Green
 - In the late 1970s, a third Stevenage club briefly met at British Aerospace Dynamics Sports Club in Gunnels Wood
 - In 1979 or 1980, Stevenange chess club moved to Springfield House in the Old Town
 - In 1983, Stevenage had to withdraw their 1st team from the league due after losing some key players
