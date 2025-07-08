@@ -189,7 +189,7 @@ This is a 4 board match for players under 1600 ELO
 The original Puller Cup was lost in the early 1960s but was returned to the Herts Chess Assocation in 1970. From 1975, it was awarded to the
 winners of a Team Tournament. See the [August 1986 HCA News Bulletin](https://e2-e4.co.uk/Herts-Mag/1986-August-No20.pdf) page 18 for more information:
 
-Stevenage have won this in:
+Stevenage have won the Old Puller Cup in:
 
 - 1982 (Pin Green)
 - 1979
