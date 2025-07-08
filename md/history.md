@@ -18,7 +18,7 @@ If old members want to contribute further, we'd love to hear from you. Please em
 - In 1977, a second Stevenage club, Pin Green, was formed that met in the Pyramid Pub in The Oval, Pin Green
 - In the late 1970s, a third Stevenage club briefly met at British Aerospace Dynamics Sports Club in Gunnels Wood
 - In 1979 or 1980, Stevenange chess club moved to Springfield House in the Old Town
-- In 1983, Stevenage had to withdraw their 1st team from the league due after losing some key players
+- In 1983, Stevenage had to withdraw their 1st team from the league after losing some key players
 
 - On 22nd April 1999, a special general meeting of Stevenage Chess Club met at Springfield House Community Centre, to consider merging the two clubs. This was passed and the amalgamation took place at the end of the playing season May 1999.
 - In Sep 1999, the club met at the British Aerospace Sports and Social Club, Six Hills Way
