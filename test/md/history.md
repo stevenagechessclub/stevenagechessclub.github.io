@@ -1,14 +1,25 @@
 # Club History
 
+Using recollections of club members, the [Hertfordshire Chess Association archives](https://hertschess.com/archives/), and Stevenage Chess Club AGMs, we've put together this history of the club.
+
+If old members want to contribute further, we'd love to hear from you. Please email the club <stevenage-chess-club@googlegroups.com>.
+
 ## Overview
 
-This is work-in-progress.
+- Stevenage Chess Club formed in 1959 when it first appears in the [Hertfordshire Chess Association Year Book 1959-1960] (https://e2-e4.co.uk/Herts-Mag/1959-60.pdf)
+- The original venue was the offices of the Stevenage Development Corporation, Daneshill House, Stevenage
+- Prior to Stevenage Chess Club being formed, there were other clubs in the area. One called Aston House met at the now demolished [Aston House](https://en.wikipedia.org/wiki/Aston_House) and [English Electric](https://en.wikipedia.org/wiki/English_Electric) had a club in Bragbury End.
+- The first silverware Stevenage won was Hertfordshire's oldest chess trophy, the Puller Cup, in 1960
+- In 1969, the [Hertfordchire Chess Association News Bulletin September 1969](https://e2-e4.co.uk/Herts-Mag/1969-September-No7.pdf) reports on Stevenage winning Division 1:
+  > Not content that their First team should win the League, Stevenage Second team were runners up. The Greeks had a word for this - Autocracy
+- The club moved to Stevenage College of Further Education in 1961
+- Throughout the 1960s and 1970s, the club was very successful winning the Hertfordshire Club Championship, the Puller Cup, several times
+- In 1975, the club moved to the the "Times Club" in London Road
+- In 1977, a second Stevenage club was formed that met in the Pyramid Pub in The Oval, Pin Green
+- In the late 1970s, a third Stevenage club briefly met at British Aerospace Dynamics Sports Club in Gunnels Wood
+- In 1979 or 1980, Stevenange chess club moved to Springfield House in the Old Town
+- In 1983, Stevenage had to withdraw their 1st team from the league due after losing some key players
 
-- Stevenage Chess Club is thought to have been formed in the late 1950s
-- The original venue was Daneshill House, Stevenage
-- The club moved to Stevenage College of Further Education in or around 1960
-- Throughout the 1960s and 1970s, the club was very successful winning the Hertfordshire Club Championship several times
-- In the mid to late 1970s, a second Stevenage club was formed that met in the Pyramid Pub in The Oval, Pin Green
 - On 22nd April 1999, a special general meeting of Stevenage Chess Club met at Springfield House Community Centre, to consider merging the two clubs. This was passed and the amalgamation took place at the end of the playing season May 1999.
 - In Sep 1999, the club met at the British Aerospace Sports and Social Club, Six Hills Way
 - In the early 2000s, the club moved to the Holy Trinity Church in the Old Town
