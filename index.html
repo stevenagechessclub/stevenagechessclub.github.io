@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stevenage Chess Club</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <script src="scripts/marked.js"></script>
+    <script src="scripts/marked.min.4.0.2.js"></script>
     <style>
         * {
             margin: 0;
@@ -220,6 +220,181 @@
             padding: 0;
         }
 
+        /* UPDATED TABLE STYLING with scrollable functionality */
+        .content-area table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .content-area th {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            font-weight: 600;
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 2px solid #3498db;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .content-area td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        .content-area tbody tr:hover {
+            background-color: #f8f9fa;
+            transition: background-color 0.2s ease;
+        }
+
+        .content-area tbody tr:nth-child(even) {
+            background-color: #fafbfc;
+        }
+
+        .content-area tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Text alignment for table cells */
+        .content-area th[align="left"],
+        .content-area td[align="left"] { text-align: left; }
+        .content-area th[align="center"],
+        .content-area td[align="center"] { text-align: center; }
+        .content-area th[align="right"],
+        .content-area td[align="right"] { text-align: right; }
+
+        /* NEW: Scrollable table wrapper with max 10 rows */
+        .scrollable-table-wrapper {
+            position: relative;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .scrollable-table-container {
+            position: relative;
+            border-radius: 8px;
+        }
+
+        .scrollable-table-container table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+        }
+
+        .scrollable-table-container thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: white;
+        }
+
+        .scrollable-table-container tbody {
+            display: block;
+            max-height: 400px; /* Approximately 10 rows */
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .scrollable-table-container thead tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .scrollable-table-container tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        /* Custom scrollbar styling */
+        .scrollable-table-container tbody::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollable-table-container tbody::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .scrollable-table-container tbody::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .scrollable-table-container tbody::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        /* Firefox scrollbar styling */
+        .scrollable-table-container tbody {
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+
+        /* Row count indicator */
+        .table-info {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+            text-align: right;
+            font-style: italic;
+        }
+
+        /* Responsive table wrapper (for horizontal scrolling) */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Code in tables */
+        .content-area table code {
+            background-color: #f1f3f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+
+        /* Links in tables */
+        .content-area table a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .content-area table a:hover {
+            color: #2980b9;
+            border-bottom: 1px solid #3498db;
+        }
+
+        /* Strong/bold text in tables */
+        .content-area table strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        /* Emphasis/italic text in tables */
+        .content-area table em {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
         .loading {
             text-align: center;
             color: #7f8c8d;
@@ -283,6 +458,20 @@
                 padding: 1rem 2rem;
                 font-size: 1.1rem;
             }
+
+            /* Mobile table adjustments */
+            .content-area table {
+                font-size: 12px;
+            }
+            
+            .content-area th,
+            .content-area td {
+                padding: 8px 12px;
+            }
+
+            .scrollable-table-container tbody {
+                max-height: 300px; /* Smaller on mobile */
+            }
         }
 
         @media (max-width: 480px) {
@@ -305,6 +494,20 @@
             .main-content {
                 padding: 0.5rem;
                 padding-top: 5rem;
+            }
+
+            /* Very small screen table adjustments */
+            .content-area table {
+                font-size: 11px;
+            }
+            
+            .content-area th,
+            .content-area td {
+                padding: 6px 8px;
+            }
+
+            .scrollable-table-container tbody {
+                max-height: 250px; /* Even smaller on very small screens */
             }
         }
 
@@ -381,7 +584,7 @@
                 li.className = 'nav-item';
                 
                 const a = document.createElement('a');
-                a.href = '#';
+                a.href = `#${item.id}`;  // Changed: Use proper hash URLs
                 a.className = 'nav-link';
                 a.dataset.page = item.id;
                 a.innerHTML = `${item.icon} ${item.title}`;
@@ -392,12 +595,24 @@
                 
                 a.addEventListener('click', (e) => {
                     e.preventDefault();
-                    loadPage(item.id);
+                    navigateToPage(item.id);  // Changed: Use navigateToPage
                 });
                 
                 li.appendChild(a);
                 navMenu.appendChild(li);
             });
+        }
+
+        // New function to handle navigation with URL updates
+        function navigateToPage(pageId) {
+            loadPage(pageId);
+            updateURL(pageId);
+        }
+
+        // New function to get current page from URL hash
+        function getCurrentPageFromURL() {
+            const hash = window.location.hash.substring(1); // Remove the '#' symbol
+            return hash && navItems.find(item => item.id === hash) ? hash : 'home';
         }
 
         async function loadPage(pageId) {
@@ -440,6 +655,12 @@
                     content.innerHTML = html;
                     currentPage = pageId;
                     
+                    // Update document title to reflect current page
+                    updatePageTitle(pageId);
+                    
+                    // Post-process tables for better responsive design and scrolling
+                    processTablesForScrolling();
+                    
                     // Smooth scroll to top
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 } catch (error) {
@@ -450,10 +671,68 @@
             }
         }
 
+        // New function to update page title
+        function updatePageTitle(pageId) {
+            const pageTitle = navItems.find(item => item.id === pageId)?.title || 'Home';
+            document.title = pageId === 'home' ? 'Stevenage Chess Club' : `${pageTitle} - Stevenage Chess Club`;
+        }
+
+        function processTablesForScrolling() {
+            const tables = document.querySelectorAll('.content-area table');
+            tables.forEach(table => {
+                const tbody = table.querySelector('tbody');
+                if (tbody) {
+                    const rows = tbody.querySelectorAll('tr');
+                    const totalRows = rows.length;
+                    
+                    // Only apply scrolling if more than 10 rows
+                    if (totalRows > 10) {
+                        // Create scrollable wrapper if it doesn't exist
+                        if (!table.parentElement.classList.contains('scrollable-table-wrapper')) {
+                            const wrapper = document.createElement('div');
+                            wrapper.className = 'scrollable-table-wrapper';
+                            
+                            const container = document.createElement('div');
+                            container.className = 'scrollable-table-container';
+                            
+                            table.parentNode.insertBefore(wrapper, table);
+                            wrapper.appendChild(container);
+                            container.appendChild(table);
+                            
+                            // Add row count info
+                            const info = document.createElement('div');
+                            info.className = 'table-info';
+                            info.textContent = `${totalRows} rows in table, scroll to see more.`;
+                            wrapper.appendChild(info);
+                        }
+                    } else {
+                        // For tables with 10 or fewer rows, just use regular responsive wrapper
+                        wrapTableForResponsive(table);
+                    }
+                } else {
+                    // For tables without tbody, just use regular responsive wrapper
+                    wrapTableForResponsive(table);
+                }
+            });
+        }
+
+        // Function to wrap tables for responsive design (horizontal scrolling)
+        function wrapTableForResponsive(table) {
+            if (!table.parentElement.classList.contains('table-wrapper') && 
+                !table.parentElement.classList.contains('scrollable-table-container')) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'table-wrapper';
+                table.parentNode.insertBefore(wrapper, table);
+                wrapper.appendChild(table);
+            }
+        }
+
         // Initialize the application
         document.addEventListener('DOMContentLoaded', () => {
             initializeNavigation();
-            loadPage('home');
+            // Changed: Load page based on URL hash
+            const initialPage = getCurrentPageFromURL();
+            loadPage(initialPage);
             initializeMobileMenu();
         });
 
@@ -487,16 +766,23 @@
             });
         }
 
-        // Handle browser back/forward buttons
-        window.addEventListener('popstate', (e) => {
-            const page = e.state?.page || 'home';
-            loadPage(page);
+        // Enhanced: Handle browser back/forward buttons with hash routing
+        window.addEventListener('hashchange', () => {
+            const page = getCurrentPageFromURL();
+            if (page !== currentPage) {
+                loadPage(page);
+            }
         });
 
-        // Update URL when navigating (optional)
+        // Enhanced: Update URL when navigating
         function updateURL(pageId) {
-            const newURL = `${window.location.pathname}#${pageId}`;
-            history.pushState({ page: pageId }, '', newURL);
+            if (pageId === 'home') {
+                // For home page, we can choose to either use #home or no hash
+                // Using #home for consistency
+                window.location.hash = '#home';
+            } else {
+                window.location.hash = '#' + pageId;
+            }
         }
     </script>
 </body>
