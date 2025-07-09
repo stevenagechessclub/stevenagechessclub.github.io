@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stevenage Chess Club</title>
     <link rel="icon" type="image/png" href="images/favicon.png">
-    <script src="scripts/marked.js"></script>
+    <script src="scripts/marked.min.4.0.2.js"></script>
     <style>
         * {
             margin: 0;
@@ -220,7 +220,7 @@
             padding: 0;
         }
 
-        /* TABLE STYLING - New addition */
+        /* UPDATED TABLE STYLING with scrollable functionality */
         .content-area table {
             width: 100%;
             border-collapse: collapse;
@@ -240,6 +240,9 @@
             border-bottom: 2px solid #3498db;
             font-size: 14px;
             letter-spacing: 0.5px;
+            position: sticky;
+            top: 0;
+            z-index: 10;
         }
 
         .content-area td {
@@ -270,7 +273,63 @@
         .content-area th[align="right"],
         .content-area td[align="right"] { text-align: right; }
 
-        /* Responsive table wrapper */
+        /* NEW: Scrollable table wrapper with max 10 rows */
+        .scrollable-table-wrapper {
+            position: relative;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .scrollable-table-container {
+            max-height: 400px; /* Approximately 10 rows */
+            overflow-y: auto;
+            overflow-x: auto;
+            border-radius: 8px;
+        }
+
+        /* Custom scrollbar styling */
+        .scrollable-table-container::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        .scrollable-table-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 4px;
+        }
+
+        .scrollable-table-container::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+
+        .scrollable-table-container::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+
+        .scrollable-table-container::-webkit-scrollbar-corner {
+            background: #f1f1f1;
+        }
+
+        /* Firefox scrollbar styling */
+        .scrollable-table-container {
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+
+        /* Row count indicator */
+        .table-info {
+            font-size: 12px;
+            color: #7f8c8d;
+            margin-top: 0.5rem;
+            text-align: right;
+            font-style: italic;
+        }
+
+        /* Responsive table wrapper (for horizontal scrolling) */
         .table-wrapper {
             overflow-x: auto;
             margin: 1.5rem 0;
@@ -385,6 +444,10 @@
             .content-area td {
                 padding: 8px 12px;
             }
+
+            .scrollable-table-container {
+                max-height: 300px; /* Smaller on mobile */
+            }
         }
 
         @media (max-width: 480px) {
@@ -417,6 +480,10 @@
             .content-area th,
             .content-area td {
                 padding: 6px 8px;
+            }
+
+            .scrollable-table-container {
+                max-height: 250px; /* Even smaller on very small screens */
             }
         }
 
@@ -552,8 +619,8 @@
                     content.innerHTML = html;
                     currentPage = pageId;
                     
-                    // Post-process tables for better responsive design
-                    wrapTablesForResponsive();
+                    // Post-process tables for better responsive design and scrolling
+                    processTablesForScrolling();
                     
                     // Smooth scroll to top
                     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -565,17 +632,55 @@
             }
         }
 
-        // Function to wrap tables for responsive design
-        function wrapTablesForResponsive() {
+        // NEW: Function to process tables for scrolling and row limits
+        function processTablesForScrolling() {
             const tables = document.querySelectorAll('.content-area table');
             tables.forEach(table => {
-                if (!table.parentElement.classList.contains('table-wrapper')) {
-                    const wrapper = document.createElement('div');
-                    wrapper.className = 'table-wrapper';
-                    table.parentNode.insertBefore(wrapper, table);
-                    wrapper.appendChild(table);
+                const tbody = table.querySelector('tbody');
+                if (tbody) {
+                    const rows = tbody.querySelectorAll('tr');
+                    const totalRows = rows.length;
+                    
+                    // Only apply scrolling if more than 10 rows
+                    if (totalRows > 10) {
+                        // Create scrollable wrapper if it doesn't exist
+                        if (!table.parentElement.classList.contains('scrollable-table-wrapper')) {
+                            const wrapper = document.createElement('div');
+                            wrapper.className = 'scrollable-table-wrapper';
+                            
+                            const container = document.createElement('div');
+                            container.className = 'scrollable-table-container';
+                            
+                            table.parentNode.insertBefore(wrapper, table);
+                            wrapper.appendChild(container);
+                            container.appendChild(table);
+                            
+                            // Add row count info
+                            const info = document.createElement('div');
+                            info.className = 'table-info';
+                            info.textContent = `Showing ${Math.min(10, totalRows)} of ${totalRows} rows. Scroll to see more.`;
+                            wrapper.appendChild(info);
+                        }
+                    } else {
+                        // For tables with 10 or fewer rows, just use regular responsive wrapper
+                        wrapTableForResponsive(table);
+                    }
+                } else {
+                    // For tables without tbody, just use regular responsive wrapper
+                    wrapTableForResponsive(table);
                 }
             });
+        }
+
+        // Function to wrap tables for responsive design (horizontal scrolling)
+        function wrapTableForResponsive(table) {
+            if (!table.parentElement.classList.contains('table-wrapper') && 
+                !table.parentElement.classList.contains('scrollable-table-container')) {
+                const wrapper = document.createElement('div');
+                wrapper.className = 'table-wrapper';
+                table.parentNode.insertBefore(wrapper, table);
+                wrapper.appendChild(table);
+            }
         }
 
         // Initialize the application
