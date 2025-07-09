@@ -9,6 +9,16 @@ The Player of the Year is awarded to the Stevenage player with the best overall 
 
 Previous winners are:
 
+| Year | Winner | Year | Winner |
+| ----------- | ----------- | ----------- | ----------- |
+| 2025 | Dominic Robinson | 2023 | Ken Maynard |
+| 2024 | Giampiero Amato | 2022 | Ken Maynard |
+
+| Year | Winner | Year | Winner | Year | Winner
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| 2025 | Dominic Robinson | 2023 | Ken Maynard | 2019 | James Palmer |
+| 2024 | Giampiero Amato | 2022 | Ken Maynard | 2018 | Chris Majer |
+
 - 2025: Dominic Robinson
 - 2024: Giampiero Amato
 - 2023: Ken Maynard
