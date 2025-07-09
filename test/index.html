@@ -283,39 +283,64 @@
         }
 
         .scrollable-table-container {
-            max-height: 400px; /* Approximately 10 rows */
-            overflow-y: auto;
-            overflow-x: auto;
+            position: relative;
             border-radius: 8px;
         }
 
-        /* Custom scrollbar styling */
-        .scrollable-table-container::-webkit-scrollbar {
-            width: 8px;
-            height: 8px;
+        .scrollable-table-container table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
         }
 
-        .scrollable-table-container::-webkit-scrollbar-track {
+        .scrollable-table-container thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background: white;
+        }
+
+        .scrollable-table-container tbody {
+            display: block;
+            max-height: 400px; /* Approximately 10 rows */
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .scrollable-table-container thead tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        .scrollable-table-container tbody tr {
+            display: table;
+            width: 100%;
+            table-layout: fixed;
+        }
+
+        /* Custom scrollbar styling */
+        .scrollable-table-container tbody::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .scrollable-table-container tbody::-webkit-scrollbar-track {
             background: #f1f1f1;
             border-radius: 4px;
         }
 
-        .scrollable-table-container::-webkit-scrollbar-thumb {
+        .scrollable-table-container tbody::-webkit-scrollbar-thumb {
             background: #888;
             border-radius: 4px;
             transition: background 0.3s ease;
         }
 
-        .scrollable-table-container::-webkit-scrollbar-thumb:hover {
+        .scrollable-table-container tbody::-webkit-scrollbar-thumb:hover {
             background: #555;
         }
 
-        .scrollable-table-container::-webkit-scrollbar-corner {
-            background: #f1f1f1;
-        }
-
         /* Firefox scrollbar styling */
-        .scrollable-table-container {
+        .scrollable-table-container tbody {
             scrollbar-width: thin;
             scrollbar-color: #888 #f1f1f1;
         }
@@ -445,7 +470,7 @@
                 padding: 8px 12px;
             }
 
-            .scrollable-table-container {
+            .scrollable-table-container tbody {
                 max-height: 300px; /* Smaller on mobile */
             }
         }
@@ -482,7 +507,7 @@
                 padding: 6px 8px;
             }
 
-            .scrollable-table-container {
+            .scrollable-table-container tbody {
                 max-height: 250px; /* Even smaller on very small screens */
             }
         }
