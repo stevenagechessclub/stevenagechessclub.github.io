@@ -584,7 +584,7 @@
                 li.className = 'nav-item';
                 
                 const a = document.createElement('a');
-                a.href = '#';
+                a.href = `#${item.id}`;  // Changed: Use proper hash URLs
                 a.className = 'nav-link';
                 a.dataset.page = item.id;
                 a.innerHTML = `${item.icon} ${item.title}`;
@@ -595,12 +595,24 @@
                 
                 a.addEventListener('click', (e) => {
                     e.preventDefault();
-                    loadPage(item.id);
+                    navigateToPage(item.id);  // Changed: Use navigateToPage
                 });
                 
                 li.appendChild(a);
                 navMenu.appendChild(li);
             });
+        }
+
+        // New function to handle navigation with URL updates
+        function navigateToPage(pageId) {
+            loadPage(pageId);
+            updateURL(pageId);
+        }
+
+        // New function to get current page from URL hash
+        function getCurrentPageFromURL() {
+            const hash = window.location.hash.substring(1); // Remove the '#' symbol
+            return hash && navItems.find(item => item.id === hash) ? hash : 'home';
         }
 
         async function loadPage(pageId) {
@@ -643,6 +655,9 @@
                     content.innerHTML = html;
                     currentPage = pageId;
                     
+                    // Update document title to reflect current page
+                    updatePageTitle(pageId);
+                    
                     // Post-process tables for better responsive design and scrolling
                     processTablesForScrolling();
                     
@@ -656,7 +671,12 @@
             }
         }
 
-        // NEW: Function to process tables for scrolling and row limits
+        // New function to update page title
+        function updatePageTitle(pageId) {
+            const pageTitle = navItems.find(item => item.id === pageId)?.title || 'Home';
+            document.title = pageId === 'home' ? 'Stevenage Chess Club' : `${pageTitle} - Stevenage Chess Club`;
+        }
+
         function processTablesForScrolling() {
             const tables = document.querySelectorAll('.content-area table');
             tables.forEach(table => {
@@ -710,7 +730,9 @@
         // Initialize the application
         document.addEventListener('DOMContentLoaded', () => {
             initializeNavigation();
-            loadPage('home');
+            // Changed: Load page based on URL hash
+            const initialPage = getCurrentPageFromURL();
+            loadPage(initialPage);
             initializeMobileMenu();
         });
 
@@ -744,16 +766,23 @@
             });
         }
 
-        // Handle browser back/forward buttons
-        window.addEventListener('popstate', (e) => {
-            const page = e.state?.page || 'home';
-            loadPage(page);
+        // Enhanced: Handle browser back/forward buttons with hash routing
+        window.addEventListener('hashchange', () => {
+            const page = getCurrentPageFromURL();
+            if (page !== currentPage) {
+                loadPage(page);
+            }
         });
 
-        // Update URL when navigating (optional)
+        // Enhanced: Update URL when navigating
         function updateURL(pageId) {
-            const newURL = `${window.location.pathname}#${pageId}`;
-            history.pushState({ page: pageId }, '', newURL);
+            if (pageId === 'home') {
+                // For home page, we can choose to either use #home or no hash
+                // Using #home for consistency
+                window.location.hash = '#home';
+            } else {
+                window.location.hash = '#' + pageId;
+            }
         }
     </script>
 </body>
