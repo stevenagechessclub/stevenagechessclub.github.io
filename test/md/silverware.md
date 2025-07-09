@@ -159,7 +159,7 @@ Stevenage have won this in:
 
 Division 6 champions are awarded the Davis Board & Set.
 
-Stevenage 4th team (unless otherwise stated) have won this in:
+Stevenage have won this in:
 
 | Year | Team |
 | ----------- | ----------- |
@@ -170,9 +170,11 @@ Stevenage 4th team (unless otherwise stated) have won this in:
 
 ### Division 7
 
-Stevenage 4th team have won this in:
+Stevenage have won this in:
 
-- 2008
+| Year | Team |
+| ----------- | ----------- |
+| 2008 | Stevenage 4 |
 
 ## Hertfordshire Chess Association Knockout Competition
 
