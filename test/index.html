@@ -224,7 +224,6 @@
         .content-area table {
             width: 100%;
             border-collapse: collapse;
-            margin: 0.5rem 0;
             background-color: #fff;
             border-radius: 8px;
             overflow: hidden;
@@ -683,7 +682,7 @@
                             // Add row count info
                             const info = document.createElement('div');
                             info.className = 'table-info';
-                            info.textContent = `Showing ${Math.min(10, totalRows)} of ${totalRows} rows. Scroll to see more.`;
+                            info.textContent = `${totalRows} rows. Scroll to see more.`;
                             wrapper.appendChild(info);
                         }
                     } else {
