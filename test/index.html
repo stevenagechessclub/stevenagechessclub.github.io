@@ -220,6 +220,98 @@
             padding: 0;
         }
 
+        /* TABLE STYLING - New addition */
+        .content-area table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .content-area th {
+            background: linear-gradient(135deg, #34495e, #2c3e50);
+            color: white;
+            font-weight: 600;
+            padding: 12px 16px;
+            text-align: left;
+            border-bottom: 2px solid #3498db;
+            font-size: 14px;
+            letter-spacing: 0.5px;
+        }
+
+        .content-area td {
+            padding: 12px 16px;
+            border-bottom: 1px solid #ecf0f1;
+            vertical-align: top;
+            font-size: 14px;
+        }
+
+        .content-area tbody tr:hover {
+            background-color: #f8f9fa;
+            transition: background-color 0.2s ease;
+        }
+
+        .content-area tbody tr:nth-child(even) {
+            background-color: #fafbfc;
+        }
+
+        .content-area tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Text alignment for table cells */
+        .content-area th[align="left"],
+        .content-area td[align="left"] { text-align: left; }
+        .content-area th[align="center"],
+        .content-area td[align="center"] { text-align: center; }
+        .content-area th[align="right"],
+        .content-area td[align="right"] { text-align: right; }
+
+        /* Responsive table wrapper */
+        .table-wrapper {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Code in tables */
+        .content-area table code {
+            background-color: #f1f3f4;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-size: 12px;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+
+        /* Links in tables */
+        .content-area table a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .content-area table a:hover {
+            color: #2980b9;
+            border-bottom: 1px solid #3498db;
+        }
+
+        /* Strong/bold text in tables */
+        .content-area table strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        /* Emphasis/italic text in tables */
+        .content-area table em {
+            color: #7f8c8d;
+            font-style: italic;
+        }
+
         .loading {
             text-align: center;
             color: #7f8c8d;
@@ -283,6 +375,16 @@
                 padding: 1rem 2rem;
                 font-size: 1.1rem;
             }
+
+            /* Mobile table adjustments */
+            .content-area table {
+                font-size: 12px;
+            }
+            
+            .content-area th,
+            .content-area td {
+                padding: 8px 12px;
+            }
         }
 
         @media (max-width: 480px) {
@@ -305,6 +407,16 @@
             .main-content {
                 padding: 0.5rem;
                 padding-top: 5rem;
+            }
+
+            /* Very small screen table adjustments */
+            .content-area table {
+                font-size: 11px;
+            }
+            
+            .content-area th,
+            .content-area td {
+                padding: 6px 8px;
             }
         }
 
@@ -440,6 +552,9 @@
                     content.innerHTML = html;
                     currentPage = pageId;
                     
+                    // Post-process tables for better responsive design
+                    wrapTablesForResponsive();
+                    
                     // Smooth scroll to top
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 } catch (error) {
@@ -448,6 +563,19 @@
             } else {
                 content.innerHTML = '<div class="error">Page not found.</div>';
             }
+        }
+
+        // Function to wrap tables for responsive design
+        function wrapTablesForResponsive() {
+            const tables = document.querySelectorAll('.content-area table');
+            tables.forEach(table => {
+                if (!table.parentElement.classList.contains('table-wrapper')) {
+                    const wrapper = document.createElement('div');
+                    wrapper.className = 'table-wrapper';
+                    table.parentNode.insertBefore(wrapper, table);
+                    wrapper.appendChild(table);
+                }
+            });
         }
 
         // Initialize the application
