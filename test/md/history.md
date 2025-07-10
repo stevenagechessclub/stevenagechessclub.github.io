@@ -16,7 +16,7 @@ If old members want to contribute further, we'd love to hear from you. Please em
 - In the early 1960s, only one team could enter the Hertfordshire league from each club.
 - In 1964, a second ICT Stevenage club was formed that met at the [International Computers and Tabulators](https://en.wikipedia.org/wiki/International_Computers_and_Tabulators) factory. Possibly to get around the one team limit as a Mr A Simm was secretary for both clubs.
 ![history-1964-yearbook-club-details.jpg](images/history-1964-yearbook-club-details.jpg)
-- As an aside, ICT later merged with English Electric Computers to become [ICL](https://en.wikipedia.org/wiki/International_Computers_Limited). Fujitsu became sole shareholder of ICL in late 1990s and was eventually rebranded to Fujitsu.
+- As an aside, ICT later merged with English Electric Computers to become [ICL](https://en.wikipedia.org/wiki/International_Computers_Limited). Fujitsu became sole shareholder of ICL in the late 1990s and was eventually rebranded to Fujitsu.
 - In 1968, the Hertfordshire Chess Association adds 2nd and 3rd divisions, and allows clubs to enter multiple teams. The ICT club becomes part of the main Stevenage club.
 ![history-1968-yearbook-divisions.jpg](images/history-1968-yearbook-divisions.jpg)
 - In 1969, the [Hertfordshire Chess Association News Bulletin September 1969](https://e2-e4.co.uk/Herts-Mag/1969-September-No7.pdf) reports on Stevenage winning Division 1:
