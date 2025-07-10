@@ -20,6 +20,7 @@ For more information, please email stevenage-chess-club@googlegroups.com and one
 - **Competitive chess** in the Hertfordshire league with games graded by the English Chess Federation
 - An annual club **blitz tournament** typically held near Christmas
 - An annual friendly match against our neighbours Letchworth & Hitchin chess club for the **Field trophy**
+- A small **library** of chess books donated by members
 
 Note the club is closed on bank holidays and throughout July and August.
 
