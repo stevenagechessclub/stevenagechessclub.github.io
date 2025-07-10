@@ -7,7 +7,7 @@ The Player of the Year is awarded to the Stevenage player with the best overall 
 - Only standard time control games count
 - A minimum of 8 games must have been played to qualify as agreed in the 2021 AGM
 
-Previous winners are:
+Winners are:
 
 | Year | Winner |
 | ----------- | ----------- |
@@ -36,7 +36,7 @@ The Blitz is an annual tournament:
 - 4 minutes + 3 second increment time control
 - Up to 11 rounds depending on the number of players
 
-Previous winners are:
+Winners are:
 
 | Year | Winner |
 | ----------- | ----------- |
@@ -59,7 +59,7 @@ Previous winners are:
 
 The Arthur Gray board is awarded to the Stevenage player who has competed in the most number of graded games in a season.
 
-Previous winners are:
+Winners are:
 
 | Year | Winner |
 | ----------- | ----------- |
