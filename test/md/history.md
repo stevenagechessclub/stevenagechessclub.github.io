@@ -13,15 +13,14 @@ If old members want to contribute further, we'd love to hear from you. Please em
 - Stevenage Chess Club had immediate success winning Hertfordshire's oldest chess trophy, the Puller Cup, in 1960
 ![history-1960-puller-cup-winners.jpg](images/history-1960-puller-cup-winners.jpg)
 ![history-1960-puller-cup-table.jpg](images/history-1960-puller-cup-table.jpg)
-- In the early 1960s, only one team could enter the Hertfordshire league from each club.
-- In 1964, a second ICT Stevenage club was formed that met at the [International Computers and Tabulators](https://en.wikipedia.org/wiki/International_Computers_and_Tabulators) factory. Possibly to get around the one team limit as a Mr A Simm was secretary for both clubs.
+- The club moved to Stevenage College of Further Education in 1961
+- In 1964, a second ICT Stevenage club was formed that met at the [International Computers and Tabulators](https://en.wikipedia.org/wiki/International_Computers_and_Tabulators) factory. Possibly to get around a one team per club limit, as a Mr A Simm was secretary for both clubs.
 ![history-1964-yearbook-club-details.jpg](images/history-1964-yearbook-club-details.jpg)
 - As an aside, ICT later merged with English Electric Computers to become [ICL](https://en.wikipedia.org/wiki/International_Computers_Limited). Fujitsu became sole shareholder of ICL in the late 1990s and was eventually rebranded to Fujitsu.
 - In 1968, the Hertfordshire Chess Association adds 2nd and 3rd divisions, and allows clubs to enter multiple teams. The ICT club becomes part of the main Stevenage club.
 ![history-1968-yearbook-divisions.jpg](images/history-1968-yearbook-divisions.jpg)
 - In 1969, the [Hertfordshire Chess Association News Bulletin September 1969](https://e2-e4.co.uk/Herts-Mag/1969-September-No7.pdf) reports on Stevenage winning Division 1:
   > Not content that their First team should win the League, Stevenage Second team were runners up. The Greeks had a word for this - Autocracy
-- The club moved to Stevenage College of Further Education in 1961
 - Throughout the 1960s and 1970s, the club was very successful winning the Hertfordshire Club Championship, the Puller Cup, several times
 - In 1975, the club moved to the "Times Club" in London Road
 - In 1977, a second Stevenage club, Pin Green, was formed that met in the Pyramid Pub in The Oval, Pin Green
