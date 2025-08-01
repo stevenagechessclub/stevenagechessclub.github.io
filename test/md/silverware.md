@@ -116,6 +116,7 @@ Stevenage have won this in:
 | 2011 | Stevenage 1 |
 | 2009 | Stevenage 1 |
 | 1982 | Pin Green 1 |
+| 1968 | Stevenage 2 |
 
 ### Division 3
 
@@ -128,6 +129,7 @@ Stevenage have won this in:
 | 2016 | Stevenage 2 |
 | 1994 | Stevenage 1 |
 | 1989 | Stevenage 1 |
+| 1987 | Pin Green 2 |
 
 ### Division 4
 
@@ -143,6 +145,8 @@ Stevenage have won this in:
 | 1996 | Stevenage 2 |
 | 1989 | Stevenage 2 |
 | 1982 | Pin Green 2 |
+| 1980 | Stevenage 4 |
+| 1978 | Hawker Siddeley |
 
 ### Division 5
 
@@ -154,6 +158,8 @@ Stevenage have won this in:
 | ----------- | ----------- |
 | 2018 | Stevenage 3 |
 | 2008 | Stevenage 3 |
+| 1983 | Pin Green 3 |
+| 1981 | Pin Green 2 |
 
 ### Division 6
 
@@ -167,6 +173,7 @@ Stevenage have won this in:
 | 2011 | Stevenage 4 |
 | 2005 | Stevenage 3 |
 | 1994 | Pin Green 2 |
+| 1986 | British Aerospace |
 
 ### Division 7
 
@@ -235,6 +242,87 @@ Stevenage have won the Old Puller Cup in:
 | 1982 | Pin Green |
 | 1979 | Stevenage |
 | 1976 | Stevenage |
+
+## Hertfordshire Chess Association Closed Individual Contests
+
+An individual competition known as the Capel, Bunce and Burn cups
+
+### Capel Cup
+
+The Capel Cup is the premier trophy producing the county champion.
+
+Stevenage players have won this in:
+
+| Year | Player | Club
+| ----------- | ----------- | ----------- |
+| 1997 | P.G. Maguire | Pin Green |
+| 1992 | P.G. Maguire | Pin Green |
+| 1984 | P.G. Maguire | Pin Green |
+| 1978 | C.W. Pickard | Stevenage |
+| 1973 | A.I. Wheatley | Stevenage |
+| 1972 | T.B. Bennett | Stevenage |
+| 1970 | T.B. Bennett | Stevenage |
+| 1969 | T.B. Bennett | Stevenage |
+| 1968 | T.B. Bennett | Stevenage |
+| 1967 | C.R. Orchard | Stevenage |
+| 1966 | G.J. Coleman | Stevenage |
+| 1962 | T.K. Hemingway | English Electric |
+
+Stevenage players have been runners up in:
+
+| Year | Player | Club
+| ----------- | ----------- | ----------- |
+| 1994 | P.G. Maguire | Pin Green |
+| 1988 | P.A.J. Brown | Stevenage |
+| 1984 | C. Purdon | Pin Green |
+| 1972 | T.B. Bennett | Stevenage |
+| 1970 | T.K. Hemingway | Stevenage |
+| 1969 | T.K. Hemingway | Stevenage |
+| 1967 | G.J. Coleman | Stevenage |
+| 1966 | T.K. Hemingway | Stevenage |
+
+### Burn Cup
+
+The Burn Cup is the minor knock-out competition. It is open to all except previous winners unless they are now over 45.
+
+Stevenage players have won this in:
+
+| Year | Player | Club
+| ----------- | ----------- | ----------- |
+| 1996 | P. Bunce | Pin Green |
+| 1991 | C. Majer | Pin Green |
+| 1987 | P.G. Maguire | Pin Green |
+| 1986 | I. Nelson | Pin Green |
+| 1980 | K.N. Mason | Pin Green |
+| 1976 | R.J. Thompson | Stevenage |
+| 1970 | A.I. Wheatley | Stevenage |
+| 1966 | P.A.J. Brown | Stevenage |
+| 1958 | R.W. Ross | English Electric |
+
+Stevenage players have been runners up in:
+
+| Year | Player | Club
+| ----------- | ----------- | ----------- |
+| 1997 | P. Bunce | Pin Green |
+| 1988 | A. Brocklehurst | Pin Green |
+| 1975 | G. Palmer | Stevenage |
+| 1957 | K. Apperley | English Electric |
+
+### Burn Plate
+
+For those early losers in the Burn Cup
+
+Stevenage players have won this in:
+
+| Year | Player | Club
+| ----------- | ----------- | ----------- |
+| 1979 | P.W. Newstead | Stevenage |
+
+### Bunce Cup
+
+For those players under 1600 rating.
+
+Stevenage have yet to have a player win this.
 
 ## Herts & District League
 
