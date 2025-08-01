@@ -88,33 +88,21 @@ reports on Stevenage:
 - The same News Bulletin has an article from T.B. Bennett detailing what could be seen as the high water mark of Club Chess in Stevenage.
 - 1968-69 also sees SCC reach the last eight of the British National Club
 Championship. A team comprising of:
-```
-    1. G.J. Coleman
-    2. T.B. Bennett
-    3. T.K. Hemingway
-    4. A.G. Burrows
-    5. P.A.J. Brown
-    6. A.P. Primett
-    7. J.R. Holland
-```
-
-- Where:
-  - G.J. Coleman was already an experienced county player with Hampshire from
+  1. G.J. Coleman was already an experienced county player with Hampshire from
     the age of 14. He was employed in Stevenage by Kodak as a development
     engineer, He was a Herts County Champion and runner up.
-  - T.B. Bennett was born 1950 and at the age of 18 was the youngest player
+  2. T.B. Bennett was born 1950 and at the age of 18 was the youngest player
     ever to win the County Championship, and would win it four times and
     play top board for the County.
-  - [A.G. Burrows](https://letchworthandhitchinchess.wordpress.com/anthony-burrows/) was a high board County Player who spent most of his playing career
+  3. [A.G. Burrows](https://letchworthandhitchinchess.wordpress.com/anthony-burrows/) was a high board County Player who spent most of his playing career
     at Letchworth.
-  - T.K. Hemmingway was a County Champion and 3 times runner up.
-  - P.A.J. Brown was the holder of the national Under 18 Correspondence
+  4.  T.K. Hemmingway was a County Champion and 3 times runner up.
+  5.  P.A.J. Brown was the holder of the national Under 18 Correspondence
     Championship, he would go on to twice win the Herts County Congress.
-  - A.P. Primett was a long time County player and won the Flear Trophy
+  6.  A.P. Primett was a long time County player and won the Flear Trophy
     three times, the first while at Welwyn in 1953-54, he was also County
     Champion Runner Up.
-  - J.R. Holland was a high board County Player.
-
+  7. J.R. Holland was a high board County Player.
 - One County Match showed the Strength of SCC with 8 of the top 11 boards filled with their players, being 1, 3, 4, 5, 7, 8, 9 and 11.
 - After the high come the low. The same Archive No. 7 holds the Obituary for G.J. Coleman. For Geoff a part read
   > ... none of our  players had a better record for the County than he
