@@ -38,6 +38,7 @@ Northern Section.
 strength in Hertfordshire Chess attracting other good players, but would
 also see Aston House compete for the last time. In their first season SCC
 would win the Puller Cup.
+
 ![history-1960-puller-cup-winners.jpg](images/history-1960-puller-cup-winners.jpg)
 ![history-1960-puller-cup-table.jpg](images/history-1960-puller-cup-table.jpg)
 - At County level, R.W. Ross and A.P. Primett were established players and
@@ -60,6 +61,7 @@ to Fujitsu.
 - 1962-63 sees ICT Stevenage affiliate for the coming season playing out of
 the ICT Canteen in Bessemer Drive. Mr A. Simm, Secretary for SCC would also
 act in this role for the ICT team.
+
 ![history-1964-yearbook-club-details.jpg](images/history-1964-yearbook-club-details.jpg)
 - 1963-64 sees Heathcote affiliate for the next season and will appear as
 Heathcote School with the Secretary being P.A.J. Brown.
@@ -74,6 +76,7 @@ playing a certain number of games which excluded T.K.Hemmingway who
 was playing County Board 2 behind G.J. Coleman. This Grading shows the
 growing strength of SCC and two others from this list will appear for them
 in the coming seasons.
+
 ![history-1966-grading.png](images/history-1966-grading.png)
 - 1966-67 see ICT Stevenage entered as ICT and they win the Eastern Section
 of the Montague-Jones Board and also see Stevenage enter a second team in
@@ -82,6 +85,7 @@ this Section. This is also the last season ICT will appear.
 structure with promotion and relegation allowing multiple teams for
 affiliated clubs. This change saw SCC enter three teams into this new
 structure all under Stevenage Chess Club (SCC).
+
 ![history-1968-yearbook-divisions.jpg](images/history-1968-yearbook-divisions.jpg)
 - 1967-68 saw SCC Division 1 Winners and also Division 2 Winners and
 Promotion.
