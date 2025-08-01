@@ -70,6 +70,7 @@ playing a certain number of games which excluded T.K.Hemmingway who
 was playing County Board 2 behind G.J. Coleman. This Grading shows the
 growing strength of SCC and two others from this list will appear for them
 in the coming seasons.
+![history-1966-grading.png](images/history-1966-grading.png)
 - 1966-67 see ICT Stevenage entered as ICT and they win the Eastern Section
 of the Montague-Jones Board and also see Stevenage enter a second team in
 this Section. This is also the last season ICT will appear.
@@ -104,6 +105,7 @@ Championship. A team comprising of:
     Champion Runner Up.
   7. J.R. Holland was a high board County Player.
 - One County Match showed the Strength of SCC with 8 of the top 11 boards filled with their players, being 1, 3, 4, 5, 7, 8, 9 and 11.
+![history-1969-herts-team.png](images/history-1969-herts-team.png)
 - After the high come the low. The same Archive No. 7 holds the Obituary for G.J. Coleman. For Geoff a part read
   > ... none of our  players had a better record for the County than he
   > ... Rarely, if ever, can our Association have lost one of its Champions so young and so tragically.
