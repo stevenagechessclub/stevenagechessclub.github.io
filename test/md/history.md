@@ -4,7 +4,8 @@ Using recollections of club members, the
 [Hertfordshire Chess Association archives](https://hertschess.com/archives/),
 and Stevenage Chess Club AGMs, we've put together this history of the club.
 
-If old members want to contribute further, we'd love to hear from you. Please email the club <stevenage-chess-club@googlegroups.com>.
+If old members want to contribute further, we'd love to hear from you.
+Please email the club <stevenage-chess-club@googlegroups.com>.
 
 - Following the end of the 1939-45 war there was an urgent Government
 requirement for new and replacement housing in the Country. In
@@ -50,9 +51,12 @@ linking the past to the present and the future.
 Education and this would be their home for a number of years.
 - The Tabulator Limited company moved to Letchworth in 1920, and Tabulators
 were a long standing member of the HCA. A merger in 1959 saw
-[International Computers and Tabulators](https://en.wikipedia.org/wiki/International_Computers_and_Tabulators) (ICT) created with works in Letchworth and
-Stevenage. ICT would merge with English Electric Computers in 1968
-becoming part of [ICL](https://en.wikipedia.org/wiki/International_Computers_Limited). Fujitsu became sole shareholder of ICL in the late 1990s and was eventually rebranded to Fujitsu.
+[International Computers and Tabulators](https://en.wikipedia.org/wiki/International_Computers_and_Tabulators)
+(ICT) created with works in Letchworth and Stevenage. ICT would merge with
+English Electric Computers in 1968 becoming part of
+[ICL](https://en.wikipedia.org/wiki/International_Computers_Limited). Fujitsu
+became sole shareholder of ICL in the late 1990s and was eventually rebranded
+to Fujitsu.
 - 1962-63 sees ICT Stevenage affiliate for the coming season playing out of
 the ICT Canteen in Bessemer Drive. Mr A. Simm, Secretary for SCC would also
 act in this role for the ICT team.
@@ -85,8 +89,10 @@ Promotion.
 Runners Up. The
 [Hertfordshire Chess Association News Bulletin September 1969](https://e2-e4.co.uk/Herts-Mag/1969-September-No7.pdf)
 reports on Stevenage:
-  > Not content that their First team should win the League, Stevenage Second team were runners up. The Greeks had a word for this - Autocracy
-- The same News Bulletin has an article from T.B. Bennett detailing what could be seen as the high water mark of Club Chess in Stevenage.
+  > Not content that their First team should win the League, Stevenage
+  > Second team were runners up. The Greeks had a word for this - Autocracy
+- The same News Bulletin has an article from T.B. Bennett detailing what could
+  be seen as the high water mark of Club Chess in Stevenage.
 - 1968-69 also sees SCC reach the last eight of the British National Club
 Championship. A team comprising of:
   1. G.J. Coleman was already an experienced county player with Hampshire from
@@ -95,27 +101,31 @@ Championship. A team comprising of:
   2. T.B. Bennett was born 1950 and at the age of 18 was the youngest player
     ever to win the County Championship, and would win it four times and
     play top board for the County.
-  3. [A.G. Burrows](https://letchworthandhitchinchess.wordpress.com/anthony-burrows/) was a high board County Player who spent most of his playing career
-    at Letchworth.
-  4.  T.K. Hemmingway was a County Champion and 3 times runner up.
-  5.  P.A.J. Brown was the holder of the national Under 18 Correspondence
+  3. [A.G. Burrows](https://letchworthandhitchinchess.wordpress.com/anthony-burrows/)
+     was a high board County Player who spent most of his playing career at Letchworth.
+  4. T.K. Hemmingway was a County Champion and 3 times runner up.
+  5. P.A.J. Brown was the holder of the national Under 18 Correspondence
     Championship, he would go on to twice win the Herts County Congress.
-  6.  A.P. Primett was a long time County player and won the Flear Trophy
+  6. A.P. Primett was a long time County player and won the Flear Trophy
     three times, the first while at Welwyn in 1953-54, he was also County
     Champion Runner Up.
   7. J.R. Holland was a high board County Player.
-- One County Match showed the Strength of SCC with 8 of the top 11 boards filled with their players, being 1, 3, 4, 5, 7, 8, 9 and 11.
+- One County Match showed the Strength of SCC with 8 of the top 11 boards
+filled with their players, being 1, 3, 4, 5, 7, 8, 9 and 11.
 ![history-1969-herts-team.png](images/history-1969-herts-team.png)
-- After the high come the low. The same Archive No. 7 holds the Obituary for G.J. Coleman. For Geoff a part read
-  > ... none of our  players had a better record for the County than he
-  > ... Rarely, if ever, can our Association have lost one of its Champions so young and so tragically.
+- After the high come the low. The same Archive No. 7 holds the Obituary for
+  G.J. Coleman. For Geoff a part read
+  > ... none of our players had a better record for the County than he
+  > ... Rarely, if ever, can our Association have lost one of its Champions
+  > so young and so tragically.
 - 1975-76 was the seventeenth season since SCC had joined the HCA and were
 placed in Division 1. This season was also the seventh time they were
 Champions and the seventh time they had won the Puller Team Knock-Out Cup.
 - There are many individual achievements at Club and County from Players in
 Stevenage, however the Division 1 title would not return to Stevenage until
 1992-93, this time in the hands of Pin Green.
-- 1978 saw Pin Green Chess Club in Stevenage affiliate with the HCA where they would play from 1978-79 until 1999.
+- 1978 saw Pin Green Chess Club in Stevenage affiliate with the HCA where
+  they would play from 1978-79 until 1999.
 - Pin Green played out of a number of locations, the Pyramid Rooms at the
   Oval, the Ibis Hotel, the Timebridge Community Centre, Stevenage Cricket
   Club and finally the British Aerospace Sports & Social Club on Gunnels
@@ -145,7 +155,9 @@ Grammar school. Heathcote school was founded in the 1950s in the Shephall
 area. It was awarded Specialist Engineering College (English specialist
 school) status. Typically in the 1970s, 1980s and 1990s students would leave
 to work at British Aerospace, GEC Marconi, Ferranti or one of the other large
-engineering firms based in or around Stevenage. The school closed in 2012
+engineering firms based in or around Stevenage. The school closed in 2012.
+There is an entry from 1961-62 showing success at the Junior level.
+![history-1962-juniorchess.png](images/history-1962-juniorchess.png)
 
 ## References
 
