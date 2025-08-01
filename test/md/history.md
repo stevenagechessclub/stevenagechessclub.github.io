@@ -112,6 +112,7 @@ Championship. A team comprising of:
   7. J.R. Holland was a high board County Player.
 - One County Match showed the Strength of SCC with 8 of the top 11 boards
 filled with their players, being 1, 3, 4, 5, 7, 8, 9 and 11.
+
 ![history-1969-herts-team.png](images/history-1969-herts-team.png)
 - After the high come the low. The same Archive No. 7 holds the Obituary for
   G.J. Coleman. For Geoff a part read
@@ -157,6 +158,7 @@ school) status. Typically in the 1970s, 1980s and 1990s students would leave
 to work at British Aerospace, GEC Marconi, Ferranti or one of the other large
 engineering firms based in or around Stevenage. The school closed in 2012.
 There is an entry from 1961-62 showing success at the Junior level.
+
 ![history-1962-juniorchess.png](images/history-1962-juniorchess.png)
 
 ## References
