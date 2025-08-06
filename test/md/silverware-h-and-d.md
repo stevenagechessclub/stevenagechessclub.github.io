@@ -1,4 +1,4 @@
-# Silverware Herts & District League
+# Herts & District Silverware
 
 This page records winners of Herts & District competitions. This is
 a separate organistaion to the Hertfordshire Chess Association (HCA)
