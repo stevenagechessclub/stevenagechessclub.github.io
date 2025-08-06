@@ -57,7 +57,10 @@ Winners are:
 
 ## Club Arthur Gray board
 
-The Arthur Gray board is awarded to the Stevenage player who has competed in the most number of graded games in a season.
+Arthur Gray rejoined Stevenage in 1985 and was a stalwart of the club before finally
+retiring from OTB chess in 1998. In recognition of his service to the club, we present
+the Arthur Gray board and set to the player who has made the most appearances for the
+club in the season just completed.
 
 Winners are:
 
