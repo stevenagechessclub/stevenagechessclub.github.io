@@ -2,7 +2,7 @@
 
 Welcome to Stevenage Chess Club. Whether you're a beginner looking to learn the basics or a seasoned player seeking challenging competition, our club offers something for everyone.
 
-**We are currently closed for the summer break. We re-open in September**
+**We are currently closed for the summer break. We re-open on Monday 1st September 2025**
 
 ## About Us
 
