@@ -2,8 +2,6 @@
 
 Welcome to Stevenage Chess Club. Whether you're a beginner looking to learn the basics or a seasoned player seeking challenging competition, our club offers something for everyone.
 
-**We are currently closed for the summer break. We re-open on Monday 1st September 2025**
-
 ## About Us
 
 We are a small, friendly club of around 25 members with players of all standards from beginners to advanced players over 2000 ELO.
