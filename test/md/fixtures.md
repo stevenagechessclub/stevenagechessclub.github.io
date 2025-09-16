@@ -1,8 +1,9 @@
-# Club Fixtures
+# Club Fixture Calendar
 
 See below for club fixtures.
 Bold **team name** fixtures are at home; italic *team name* fixtures are away.
 
+See [fixtures.csv](/fixtures/fixtures.csv)
 
 | DAY | DATE | 1ST TEAM | 2ND TEAM | 3RD TEAM | U1600 | K/O Cups | H & D |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
