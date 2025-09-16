@@ -3,7 +3,7 @@
 See [fixtures.csv](/fixtures/fixtures.csv) for detailed fixture list
 where UPPERCASE teams are home fixtures and lowercase teams are away fixtures.
 
-Or the below table where bold **teams** are home fixtures and italic *teams* are away fixtures.
+Or the below table where **bold teams** are home fixtures and *italic teams* are away fixtures.
 
 
 | DATE | H & D / Other | 1ST TEAM / SHARP | 2ND TEAM / U1750 KO | 3RD TEAM / U1600 |
@@ -28,9 +28,9 @@ Or the below table where bold **teams** are home fixtures and italic *teams* are
 | Mon 01-Dec-2025 | *Royston* |  |  | **Enfield 2 (U1600 League)** |
 | Mon 08-Dec-2025 |  | *Hemel Hempstead 2* |  | **Little Heath 4** |
 | Tue 09-Dec-2025 |  |  | *Enfield 1* |  |
-| Mon 15-Dec-2025 | Christmas Blitz |  |  |  |
-| Mon 22-Dec-2025 | CLOSED |  |  |  |
-| Mon 29-Dec-2025 | CLOSED |  |  |  |
+| Mon 15-Dec-2025 | **Christmas Blitz** |  |  |  |
+| Mon 22-Dec-2025 | **CLOSED** |  |  |  |
+| Mon 29-Dec-2025 | **CLOSED** |  |  |  |
 | Mon 05-Jan-2026 |  | **Letchworth & Hitchin 1** |  | **Hemel Hempstead 5** |
 | Mon 12-Jan-2026 |  |  | **Letchworth & Hitchin 3** |  |
 | Tue 13-Jan-2026 |  |  |  | *Enfield 2 (U1600 League)* |
@@ -48,18 +48,18 @@ Or the below table where bold **teams** are home fixtures and italic *teams* are
 | Mon 23-Mar-2026 |  |  | **Welwyn Hatfield 2** | *St Albans 2 (U1600 League)* |
 | Tue 24-Mar-2026 |  | *Hertford 1* |  |  |
 | Mon 30-Mar-2026 |  |  | **Hertford 3** |  |
-| Mon 06-Apr-2026 | CLOSED |  |  |  |
+| Mon 06-Apr-2026 | **CLOSED** |  |  |  |
 | Mon 13-Apr-2026 |  |  |  | **Rothamsted 2** |
 | Mon 20-Apr-2026 |  | **Hemel Hempstead 1** |  |  |
 | Mon 27-Apr-2026 |  |  | *Watford 2* | **Hertford 2 (U1600 League)** |
 | Wed 29-Apr-2026 |  |  |  | *Little Heath 4* |
 | Thu 30-Apr-2026 | *Hoddesdon* |  |  |  |
-| Mon 04-May-2026 | CLOSED |  |  |  |
+| Mon 04-May-2026 | **CLOSED** |  |  |  |
 | Tue 05-May-2026 |  |  | *Welwyn Hatfield 2* |  |
 | Thu 07-May-2026 | *Bishops Stortford* |  |  |  |
 | Mon 11-May-2026 |  | *St Albans 2* |  | **St Albans 8** |
 | Mon 18-May-2026 |  | **Hemel Hempstead 2** |  | *Hemel Hempstead 2 (U1600 League)* |
-| Mon 25-May-2026 | CLOSED |  |  |  |
+| Mon 25-May-2026 | **CLOSED** |  |  |  |
 | Mon 01-Jun-2026 |  |  |  |  |
 | Mon 08-Jun-2026 |  |  |  |  |
 | Mon 15-Jun-2026 |  |  |  |  |
