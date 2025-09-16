@@ -301,7 +301,7 @@
 
         .scrollable-table-container tbody {
             display: block;
-            max-height: 400px; /* Approximately 10 rows */
+            max-height: 800px; /* Approximately 20 rows */
             overflow-y: auto;
             overflow-x: hidden;
         }
@@ -691,8 +691,8 @@
                     const rows = tbody.querySelectorAll('tr');
                     const totalRows = rows.length;
                     
-                    // Only apply scrolling if more than 10 rows
-                    if (totalRows > 10) {
+                    // Only apply scrolling if more than 20 rows
+                    if (totalRows > 20) {
                         // Create scrollable wrapper if it doesn't exist
                         if (!table.parentElement.classList.contains('scrollable-table-wrapper')) {
                             const wrapper = document.createElement('div');
@@ -712,7 +712,7 @@
                             wrapper.appendChild(info);
                         }
                     } else {
-                        // For tables with 10 or fewer rows, just use regular responsive wrapper
+                        // For tables with 20 or fewer rows, just use regular responsive wrapper
                         wrapTableForResponsive(table);
                     }
                 } else {
