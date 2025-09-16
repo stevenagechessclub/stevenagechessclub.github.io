@@ -94,6 +94,8 @@ def add_club_nights(fixtures, table_format):
                 add_fixture(fixtures, night, 'H & D / Other', 'CLOSED')
             elif night == christmas_blitz_date:
                 add_fixture(fixtures, night, 'H & D / Other', 'Christmas Blitz')
+            else:
+                add_fixture(fixtures, night, 'PLACEHOLDER', 'Open')
         else:
             raise ValueError('Unsupported table_format {table_format}')
 
@@ -227,7 +229,7 @@ def fixtures_to_table(fixtures, columns, table_format):
         fixture = fixtures[date]
         num_fixtures_on_date = 0
         for column in columns:
-            if column in fixture and column not in ['DATE', 'CLUB'] and fixture[column] not in ['CLOSED', 'Christmas Blitz']:
+            if column in fixture and column not in ['DATE', 'CLUB', 'PLACEHOLDER'] and fixture[column] not in ['CLOSED', 'Christmas Blitz']:
                 num_fixtures_on_date += 1
         for fixture_key in fixture:
             if fixture_key not in columns and fixture_key not in ['DATE', 'CLUB']:

@@ -8,6 +8,10 @@ Or the below table where bold **teams** are home fixtures and italic *teams* are
 
 | DATE | H & D / Other | 1ST TEAM / SHARP | 2ND TEAM / U1750 KO | 3RD TEAM / U1600 |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
+| Mon 01-Sep-2025 |  |  |  |  |
+| Mon 08-Sep-2025 |  |  |  |  |
+| Mon 15-Sep-2025 |  |  |  |  |
+| Mon 22-Sep-2025 |  |  |  |  |
 | Mon 29-Sep-2025 |  |  | **St Albans 5** | **Hemel Hempstead 3 (U1600 League)** |
 | Mon 06-Oct-2025 |  |  | *Hemel Hempstead 4* |  |
 | Mon 13-Oct-2025 | **Hertford** |  |  |  |
@@ -56,3 +60,8 @@ Or the below table where bold **teams** are home fixtures and italic *teams* are
 | Mon 11-May-2026 |  | *St Albans 2* |  | **St Albans 8** |
 | Mon 18-May-2026 |  | **Hemel Hempstead 2** |  | *Hemel Hempstead 2 (U1600 League)* |
 | Mon 25-May-2026 | CLOSED |  |  |  |
+| Mon 01-Jun-2026 |  |  |  |  |
+| Mon 08-Jun-2026 |  |  |  |  |
+| Mon 15-Jun-2026 |  |  |  |  |
+| Mon 22-Jun-2026 |  |  |  |  |
+| Mon 29-Jun-2026 |  |  |  |  |
