@@ -55,8 +55,7 @@ def add_fixture(fixtures, date_time, column_header, row_entry):
         fixture[column_header] = row_entry
     else:
         fixtures[date_ymd] = {
-            'DAY': date_time.strftime("%a"),
-            'DATE': date_time.strftime("%d %b %Y"),
+            'DATE': date_time.strftime("%a %d-%b-%Y"),
             column_header: row_entry
         }
 
@@ -171,10 +170,10 @@ def fixtures_to_table(fixtures, columns, table_format, open_or_closed_filter):
         fixture = fixtures[date]
         num_fixtures_on_date = 0
         for column in columns:
-            if column in fixture and column not in ['DAY', 'DATE', 'OPEN/CLOSED']:
+            if column in fixture and column not in ['DATE', 'OPEN/CLOSED']:
                 num_fixtures_on_date += 1
         for fixture_key in fixture:
-            if fixture_key not in columns and fixture_key not in ['DAY', 'DATE', 'OPEN/CLOSED']:
+            if fixture_key not in columns and fixture_key not in ['DATE', 'OPEN/CLOSED']:
                 if fixture_key not in ignored_columns:
                     ignored_columns.append(fixture_key)
         num_fixtures += num_fixtures_on_date
@@ -215,7 +214,7 @@ def print_fixtures_csv():
     add_club_nights(fixtures, club_nights, bank_holidays, closed_nights)
 
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'csv')
-    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DAY', 'DATE', '1ST TEAM / SHARP', '2ND TEAM / U1750 KO', '3RD TEAM', 'U1600', 'H & D'], 'csv', ['OPEN'])
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DATE', '1ST TEAM / SHARP', '2ND TEAM / U1750 KO', '3RD TEAM', 'U1600', 'H & D'], 'csv', ['OPEN'])
     if max_fixtures_on_date != 2:
         raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
     if num_fixtures_on_date_check != num_fixtures:
@@ -230,7 +229,7 @@ def print_fixtures_md():
     add_club_nights(fixtures, club_nights, bank_holidays, closed_nights)
 
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'md')
-    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DAY', 'DATE', '1ST TEAM / SHARP', '2ND TEAM / U1750 KO', '3RD TEAM', 'U1600', 'H & D'], 'md', ['OPEN'])
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DATE', '1ST TEAM / SHARP', '2ND TEAM / U1750 KO', '3RD TEAM', 'U1600', 'H & D'], 'md', ['OPEN'])
     if max_fixtures_on_date != 2:
         raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
     if num_fixtures_on_date_check != num_fixtures:
