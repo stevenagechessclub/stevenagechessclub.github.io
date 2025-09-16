@@ -3,10 +3,10 @@ python3 fixtures.py csv > fixtures.csv
 
 echo '# Club Fixture Calendar
 
-See below for club fixtures.
-Bold **team name** fixtures are at home; italic *team name* fixtures are away.
+See [fixtures.csv](/fixtures/fixtures.csv) for detailed fixture list
+where UPPERCASE teams are home fixtures and lowercase teams are away fixtures.
 
-See [fixtures.csv](/fixtures/fixtures.csv)
+Or the below table where bold **teams** are home fixtures and italic *teams* are away fixtures.
 
 ' > fixtures.md
 python3 fixtures.py md >> fixtures.md
