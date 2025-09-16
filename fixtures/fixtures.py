@@ -4,12 +4,14 @@ import urllib.request
 import json
 import sys
 
+
 def get_current_season_year():
     now = datetime.datetime.now()
     year = now.year
     if now.month < 7:
         year -= 1
     return year
+
 
 def get_club_nights():
     dates = []
@@ -48,11 +50,13 @@ def add_fixture(fixtures, date_time, column_header, row_entry):
     date_ymd = date_time.strftime("%Y-%m-%d")
     if date_ymd in fixtures:
         fixture = fixtures[date_ymd]
+        if column_header in fixture:
+            raise ValueError(f'Duplicate entry for {date_ymd} {column_header}: {fixture[column_header]} and {row_entry}')
         fixture[column_header] = row_entry
     else:
         fixtures[date_ymd] = {
-            'DAY': date_time.strftime("%A"),
-            'DATE': date_time.strftime("%d-%b-%Y"),
+            'DAY': date_time.strftime("%a"),
+            'DATE': date_time.strftime("%d %b %Y"),
             column_header: row_entry
         }
 
@@ -100,9 +104,9 @@ def add_e2e4_fixtures(fixtures, fixtures_path, table_format):
                 if competition == "Herts League":
                     row_entry = versus_team
                     if my_team == "Stevenage 1":
-                        column_header = "1ST TEAM"
+                        column_header = "1ST TEAM / SHARP"
                     elif my_team == "Stevenage 2":
-                        column_header = "2ND TEAM"
+                        column_header = "2ND TEAM / U1750 KO"
                     elif my_team == "Stevenage 3":
                         column_header = "3RD TEAM"
                 elif competition == "H&D League":
@@ -115,15 +119,15 @@ def add_e2e4_fixtures(fixtures, fixtures_path, table_format):
                         column_header = "U1600"
                 elif competition == "Knock Out":
                     if my_team == "Stevenage":
-                        column_header = "K/O Cups"
-                        if division == "Russell Trophy":
-                            row_entry = f'{versus_team} (Russell)'
-                        elif division == "Sharp Trophy":
+                        if division == "Sharp Trophy":
+                            column_header = "1ST TEAM / SHARP"
                             row_entry = f'{versus_team} (Sharp)'
                         elif division == "Under 1750 Cup":
-                            row_entry = f'{versus_team} (U1750)'
+                            column_header = "2ND TEAM / U1750 KO"
+                            row_entry = f'{versus_team} (U1750 KO)'
                         elif division == "Under 1600 Cup":
-                            row_entry = f'{versus_team} (U1600)'
+                            column_header = "U1600"
+                            row_entry = f'{versus_team} (U1600 KO)'
                 if not column_header or not row_entry:
                     raise ValueError(f'line {line_number}: unexpected team {my_team} in {competition}')
                 if table_format == 'md':
@@ -211,7 +215,7 @@ def print_fixtures_csv():
     add_club_nights(fixtures, club_nights, bank_holidays, closed_nights)
 
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'csv')
-    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DAY', 'DATE', '1ST TEAM', '2ND TEAM', '3RD TEAM', 'U1600', 'K/O Cups', 'H & D'], 'csv', ['OPEN'])
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DAY', 'DATE', '1ST TEAM / SHARP', '2ND TEAM / U1750 KO', '3RD TEAM', 'U1600', 'H & D'], 'csv', ['OPEN'])
     if max_fixtures_on_date != 2:
         raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
     if num_fixtures_on_date_check != num_fixtures:
@@ -226,7 +230,7 @@ def print_fixtures_md():
     add_club_nights(fixtures, club_nights, bank_holidays, closed_nights)
 
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'md')
-    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DAY', 'DATE', '1ST TEAM', '2ND TEAM', '3RD TEAM', 'U1600', 'K/O Cups', 'H & D'], 'md', ['OPEN'])
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DAY', 'DATE', '1ST TEAM / SHARP', '2ND TEAM / U1750 KO', '3RD TEAM', 'U1600', 'H & D'], 'md', ['OPEN'])
     if max_fixtures_on_date != 2:
         raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
     if num_fixtures_on_date_check != num_fixtures:
