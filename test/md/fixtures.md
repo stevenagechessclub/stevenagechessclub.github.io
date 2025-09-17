@@ -1,9 +1,11 @@
 # Club Fixture Calendar
 
-See [fixtures.csv](/fixtures/fixtures.csv) for detailed fixture list
-where UPPERCASE teams are home fixtures and lowercase teams are away fixtures.
+See [fixtures.csv](/fixtures/fixtures.csv) for detailed fixture list.
 
 Or the below table where **bold teams** are home fixtures and *italic teams* are away fixtures.
+
+NOTE: We have a bye in the first round of the Sharp Knockout Trophy. The Field Trophy, AGM and
+subsequent Knockout rounds are still to be scheduled.
 
 
 | DATE | H & D / Other | 1ST TEAM / SHARP | 2ND TEAM / U1750 KO | 3RD TEAM / U1600 |

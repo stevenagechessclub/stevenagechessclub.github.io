@@ -3,10 +3,12 @@ python3 fixtures.py csv > fixtures.csv
 
 echo '# Club Fixture Calendar
 
-See [fixtures.csv](/fixtures/fixtures.csv) for detailed fixture list
-where UPPERCASE teams are home fixtures and lowercase teams are away fixtures.
+See [fixtures.csv](/fixtures/fixtures.csv) for detailed fixture list.
 
 Or the below table where **bold teams** are home fixtures and *italic teams* are away fixtures.
+
+NOTE: We have a bye in the first round of the Sharp Knockout Trophy. The Field Trophy, AGM and
+subsequent Knockout rounds are still to be scheduled.
 
 ' > fixtures.md
 python3 fixtures.py md >> fixtures.md

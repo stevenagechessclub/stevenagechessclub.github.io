@@ -161,9 +161,9 @@ def add_e2e4_fixtures(fixtures, fixtures_path, table_format):
                     if not column_header or not row_entry:
                         raise ValueError(f'line {line_number}: unexpected team {my_team} in {competition}')
                     if home_fixture:
-                        row_entry = row_entry.upper()
+                        row_entry = f'{row_entry} (Home)'
                     else:
-                        row_entry = row_entry.lower()
+                        row_entry = f'{row_entry} (Away)'
                 elif table_format == 'md':
                     if competition == "Herts League":
                         row_entry = versus_team
