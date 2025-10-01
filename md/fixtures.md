@@ -27,7 +27,7 @@ subsequent Knockout rounds are still to be scheduled.
 | Mon 10-Nov-2025 |  | **St Albans 2** |  | *St Albans 8* |
 | Mon 17-Nov-2025 | **Bishops Stortford** |  |  |  |
 | Mon 24-Nov-2025 |  |  | **Watford 2** |  |
-| Mon 01-Dec-2025 | *Royston* |  |  | **Enfield 2 (U1600 League)** |
+| Mon 01-Dec-2025 |  |  |  | **Enfield 2 (U1600 League)** |
 | Mon 08-Dec-2025 |  | *Hemel Hempstead 2* |  | **Little Heath 4** |
 | Tue 09-Dec-2025 |  |  | *Enfield 1* |  |
 | Mon 15-Dec-2025 | **Christmas Blitz** |  |  |  |
@@ -51,7 +51,7 @@ subsequent Knockout rounds are still to be scheduled.
 | Tue 24-Mar-2026 |  | *Hertford 1* |  |  |
 | Mon 30-Mar-2026 |  |  | **Hertford 3** |  |
 | Mon 06-Apr-2026 | **CLOSED** |  |  |  |
-| Mon 13-Apr-2026 |  |  |  | **Rothamsted 2** |
+| Mon 13-Apr-2026 | *Royston* |  |  | **Rothamsted 2** |
 | Mon 20-Apr-2026 |  | **Hemel Hempstead 1** |  |  |
 | Mon 27-Apr-2026 |  |  | *Watford 2* | **Hertford 2 (U1600 League)** |
 | Wed 29-Apr-2026 |  |  |  | *Little Heath 4* |
