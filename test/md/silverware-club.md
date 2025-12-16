@@ -12,7 +12,7 @@ The Player of the Year is awarded to the Stevenage player with the best overall 
 
 Winners are:
 
-| Year | Winner |
+| Year (Season End) | Winner |
 | ----------- | ----------- |
 | 2025 | Dominic Robinson |
 | 2024 | Giampiero Amato |
@@ -41,8 +41,9 @@ The Blitz is an annual tournament:
 
 Winners are:
 
-| Year | Winner |
+| Year (Season End) | Winner |
 | ----------- | ----------- |
+| 2026 | Ewan Fewell |
 | 2025 | Dominic Robinson |
 | 2024 | Ewan Fewell |
 | 2023 | Ewan Fewell |
@@ -67,7 +68,7 @@ club in the season just completed.
 
 Winners are:
 
-| Year | Winner |
+| Year (Season End) | Winner |
 | ----------- | ----------- |
 | 2025 | Frank Trethewey |
 | 2024 | Steve Rawlings and Patrick Fitzgerald |
@@ -92,7 +93,7 @@ The Field Trophy is a friendly competition between Stevenage and Letchworth & Hi
 
 Stevenage have won the Field Trophy in:
 
-| Year | Team |
+| Year (Season End) | Team |
 | ----------- | ----------- |
 | 2023 | Stevenage |
 | 2015 | Stevenage and Letchworth & Hitchin |
