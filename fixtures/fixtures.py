@@ -78,7 +78,7 @@ def add_club_nights(fixtures, table_format):
         if table_format == 'dates':
             if night not in bank_holidays and night not in closed_nights:
                 add_fixture(fixtures, night, 'CLUB', 'Club Night')
-        elif table_format == 'csv':
+        elif table_format == 'csv' or table_format == 'csv2':
             if night in bank_holidays:
                 add_fixture(fixtures, night, 'CLUB', 'CLOSED')
             elif night in closed_nights:
@@ -130,7 +130,7 @@ def add_e2e4_fixtures(fixtures, fixtures_path, table_format):
                 column_header = None
                 row_entry     = None
 
-                if table_format == 'csv':
+                if table_format == 'csv' or table_format == 'csv2':
                     if competition == "Herts League":
                         row_entry = versus_team
                         if my_team == "Stevenage 1":
@@ -160,10 +160,16 @@ def add_e2e4_fixtures(fixtures, fixtures_path, table_format):
                                 row_entry = f'{versus_team} (U1600 KO)'
                     if not column_header or not row_entry:
                         raise ValueError(f'line {line_number}: unexpected team {my_team} in {competition}')
-                    if home_fixture:
-                        row_entry = f'{row_entry} (Home)'
-                    else:
-                        row_entry = f'{row_entry} (Away)'
+                    if table_format == 'csv':
+                        if home_fixture:
+                            row_entry = f'{row_entry} (Home)'
+                        else:
+                            row_entry = f'{row_entry} (Away)'
+                    elif table_format == 'csv2':
+                        if home_fixture:
+                            column_header = f'{column_header} (Home)'
+                        else:
+                            column_header = f'{column_header} (Away)'
                 elif table_format == 'md':
                     if competition == "Herts League":
                         row_entry = versus_team
@@ -220,7 +226,7 @@ def fixtures_to_table(fixtures, columns, table_format):
             dashes.append('-----------')
         print(f'| {" | ".join(columns)} |')
         print(f'| {" | ".join(dashes)} |')
-    elif table_format == 'csv':
+    elif table_format == 'csv' or table_format == 'csv2':
         print(','.join(columns))
     else:
         raise ValueError(f'unsupported table_format {table_format}')
@@ -250,7 +256,7 @@ def fixtures_to_table(fixtures, columns, table_format):
                     row.append('')
             if table_format == 'md':
                 print(f'| {" | ".join(row)} |')
-            elif table_format == 'csv':
+            elif table_format == 'csv' or table_format == 'csv2':
                 print(','.join(row))
     return (num_fixtures, max_fixtures_on_date, ignored_columns)
 
@@ -263,10 +269,47 @@ def print_club_nights():
 
 def print_fixtures_csv():
     fixtures = {}
+    column_headings = [
+        'DATE',
+        'CLUB',
+        '1ST TEAM',
+        '2ND TEAM',
+        '3RD TEAM',
+        'U1600',
+        'K/O Cups',
+        'Herts & District'
+    ]
     add_club_nights(fixtures, 'csv')
 
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'csv')
-    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DATE', 'CLUB', '1ST TEAM', '2ND TEAM', '3RD TEAM', 'U1600', 'K/O Cups', 'Herts & District'], 'csv')
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'csv')
+    if max_fixtures_on_date != 2:
+        raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
+    if num_fixtures_on_date_check != num_fixtures:
+        raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} {",".join(ignored_columns)}')
+
+
+def print_fixtures_csv2():
+    fixtures = {}
+    column_headings = [
+        'DATE',
+        'CLUB',
+        '1ST TEAM (Home)',
+        '1ST TEAM (Away)',
+        '2ND TEAM (Home)',
+        '2ND TEAM (Away)',
+        '3RD TEAM (Home)',
+        '3RD TEAM (Away)',
+        'U1600 (Home)',
+        'U1600 (Away)',
+        'K/O Cups (Home)',
+        'K/O Cups (Away)',
+        'Herts & District (Home)',
+        'Herts & District (Away)'
+    ]
+    add_club_nights(fixtures, 'csv2')
+    (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'csv2')
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'csv2')
     if max_fixtures_on_date != 2:
         raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
     if num_fixtures_on_date_check != num_fixtures:
@@ -275,10 +318,17 @@ def print_fixtures_csv():
 
 def print_fixtures_md():
     fixtures = {}
+    column_headings = [
+        'DATE',
+        'H & D / Other',
+        '1ST TEAM / SHARP',
+        '2ND TEAM / U1750 KO',
+        '3RD TEAM / U1600'
+    ]
     add_club_nights(fixtures, 'md')
 
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'md')
-    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, ['DATE', 'H & D / Other', '1ST TEAM / SHARP', '2ND TEAM / U1750 KO', '3RD TEAM / U1600'], 'md')
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'md')
     if max_fixtures_on_date != 2:
         raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
     if num_fixtures_on_date_check != num_fixtures:
@@ -286,11 +336,13 @@ def print_fixtures_md():
 
 
 if len(sys.argv) != 2:
-    print(f'Usage: {sys.argv[0]} dates|csv|md')
+    print(f'Usage: {sys.argv[0]} dates|csv|csv2|md')
 elif sys.argv[1] == 'dates':
     print_club_nights()
 elif sys.argv[1] == 'csv':
     print_fixtures_csv()
+elif sys.argv[1] == 'csv2':
+    print_fixtures_csv2()
 elif sys.argv[1] == 'md':
     print_fixtures_md()
 else:

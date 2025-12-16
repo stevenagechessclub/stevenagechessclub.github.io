@@ -10,27 +10,6 @@ subsequent Knockout rounds are still to be scheduled.
 
 | DATE | H & D / Other | 1ST TEAM / SHARP | 2ND TEAM / U1750 KO | 3RD TEAM / U1600 |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Mon 01-Sep-2025 |  |  |  |  |
-| Mon 08-Sep-2025 |  |  |  |  |
-| Mon 15-Sep-2025 |  |  |  |  |
-| Mon 22-Sep-2025 |  |  |  |  |
-| Mon 29-Sep-2025 |  |  | **St Albans 5** | **Hemel Hempstead 3 (U1600 League)** |
-| Mon 06-Oct-2025 |  |  | *Hemel Hempstead 4* |  |
-| Mon 13-Oct-2025 | **Hertford** |  |  |  |
-| Tue 14-Oct-2025 |  |  |  | *Hertford 2 (U1600 League)* |
-| Wed 15-Oct-2025 |  | *Little Heath 1* |  |  |
-| Mon 20-Oct-2025 |  | *Hemel Hempstead 1* |  | **Letchworth & Hitchin 5** |
-| Mon 27-Oct-2025 |  |  | **Enfield 1** | **Hemel Hempstead 2 (U1600 League)** |
-| Tue 28-Oct-2025 |  |  | *Hertford (U1750 KO)* |  |
-| Mon 03-Nov-2025 |  | **St Albans 1** |  | *Hemel Hempstead (U1600 KO)* |
-| Tue 04-Nov-2025 |  |  |  | *Welwyn Hatfield 3* |
-| Mon 10-Nov-2025 |  | **St Albans 2** |  | *St Albans 8* |
-| Mon 17-Nov-2025 | **Bishops Stortford** |  |  |  |
-| Mon 24-Nov-2025 |  |  | **Watford 2** |  |
-| Mon 01-Dec-2025 |  |  |  | **Enfield 2 (U1600 League)** |
-| Mon 08-Dec-2025 |  | *Hemel Hempstead 2* |  | **Little Heath 4** |
-| Tue 09-Dec-2025 |  |  | *Enfield 1* |  |
-| Mon 15-Dec-2025 | **Christmas Blitz** |  |  |  |
 | Mon 22-Dec-2025 | **CLOSED** |  |  |  |
 | Mon 29-Dec-2025 | **CLOSED** |  |  |  |
 | Mon 05-Jan-2026 |  | **Letchworth & Hitchin 1** |  | **Hemel Hempstead 5** |
