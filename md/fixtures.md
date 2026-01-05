@@ -10,12 +10,10 @@ subsequent Knockout rounds are still to be scheduled.
 
 | DATE | H & D / Other | 1ST TEAM / SHARP | 2ND TEAM / U1750 KO | 3RD TEAM / U1600 |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Mon 22-Dec-2025 | **CLOSED** |  |  |  |
-| Mon 29-Dec-2025 | **CLOSED** |  |  |  |
 | Mon 05-Jan-2026 |  | **Letchworth & Hitchin 1** |  | **Hemel Hempstead 5** |
 | Mon 12-Jan-2026 |  |  | **Letchworth & Hitchin 3** |  |
 | Tue 13-Jan-2026 |  |  |  | *Enfield 2 (U1600 League)* |
-| Mon 19-Jan-2026 | **Hoddesdon** |  |  | **St Albans 2 (U1600 League)** |
+| Mon 19-Jan-2026 |  | *St Albans (Sharp)* |  | **St Albans 2 (U1600 League)** |
 | Tue 20-Jan-2026 |  |  | *Hertford 3* |  |
 | Mon 26-Jan-2026 |  | **Little Heath 1** |  | *Rothamsted 2* |
 | Mon 02-Feb-2026 |  |  | **Hemel Hempstead 4** |  |
@@ -28,7 +26,7 @@ subsequent Knockout rounds are still to be scheduled.
 | Mon 16-Mar-2026 | **Royston** |  |  |  |
 | Mon 23-Mar-2026 |  |  | **Welwyn Hatfield 2** | *St Albans 2 (U1600 League)* |
 | Tue 24-Mar-2026 |  | *Hertford 1* |  |  |
-| Mon 30-Mar-2026 |  |  | **Hertford 3** |  |
+| Mon 30-Mar-2026 | **Hoddesdon** |  | **Hertford 3** |  |
 | Mon 06-Apr-2026 | **CLOSED** |  |  |  |
 | Mon 13-Apr-2026 | *Royston* |  |  | **Rothamsted 2** |
 | Mon 20-Apr-2026 |  | **Hemel Hempstead 1** |  |  |
