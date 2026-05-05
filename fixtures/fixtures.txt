@@ -39,23 +39,23 @@ Tue 24-Feb-2026	H&D	H&D League	North	Hertford	Stevenage	3-2
 Mon 02-Mar-2026	Herts CA	Herts League	Division 1	Letchworth & Hitchin 1	Stevenage 1	3.5-1.5
 Mon 02-Mar-2026	Herts CA	Herts League	Division 6	Hemel Hempstead 5	Stevenage 3	3-2
 Mon 09-Mar-2026	Herts CA	Herts League	Division 4	Letchworth & Hitchin 3	Stevenage 2	2-3
-Mon 16-Mar-2026	H&D	H&D League	North	Stevenage	Royston	-
-Mon 23-Mar-2026	Herts CA	Herts League	Division 4	Stevenage 2	Welwyn Hatfield 2	-
-Mon 23-Mar-2026	Herts CA	U1600 League	Division 2	St Albans 2	Stevenage	-
-Tue 24-Mar-2026	Herts CA	Herts League	Division 1	Hertford 1	Stevenage 1	-
-Mon 30-Mar-2026	H&D	H&D League	North	Stevenage	Hoddesdon	-
-Mon 30-Mar-2026	Herts CA	Herts League	Division 4	Stevenage 2	Hertford 3	-
-Mon 13-Apr-2026	H&D	H&D League	North	Royston	Stevenage	-
-Mon 13-Apr-2026	Herts CA	Herts League	Division 6	Stevenage 3	Rothamsted 2	-
-Mon 20-Apr-2026	Herts CA	Herts League	Division 1	Stevenage 1	Hemel Hempstead 1	-
-Mon 20-Apr-2026	Herts CA	Herts League	Division 6	Stevenage 3	Hemel Hempstead 5	-
-Mon 27-Apr-2026	Herts CA	Herts League	Division 4	Watford 2	Stevenage 2	-
-Mon 27-Apr-2026	Herts CA	U1600 League	Division 2	Stevenage	Hertford 2	-
-Wed 29-Apr-2026	Herts CA	Herts League	Division 6	Little Heath 4	Stevenage 3	-
-Thu 30-Apr-2026	H&D	H&D League	North	Hoddesdon	Stevenage	-
+Mon 16-Mar-2026	H&D	H&D League	North	Stevenage	Royston	2.5-2.5
+Mon 23-Mar-2026	Herts CA	Herts League	Division 4	Stevenage 2	Welwyn Hatfield 2	1.5-3.5
+Mon 23-Mar-2026	Herts CA	U1600 League	Division 2	St Albans 2	Stevenage	2-2
+Tue 24-Mar-2026	Herts CA	Herts League	Division 1	Hertford 1	Stevenage 1	4-1
+Mon 30-Mar-2026	H&D	H&D League	North	Stevenage	Hoddesdon	3.5-1.5
+Mon 30-Mar-2026	Herts CA	Herts League	Division 4	Stevenage 2	Hertford 3	4-1
+Mon 13-Apr-2026	H&D	H&D League	North	Royston	Stevenage	3.5-1.5
+Mon 13-Apr-2026	Herts CA	Herts League	Division 6	Stevenage 3	Rothamsted 2	2-3
+Mon 20-Apr-2026	Herts CA	Herts League	Division 1	Stevenage 1	Hemel Hempstead 1	0-5
+Mon 20-Apr-2026	Herts CA	Herts League	Division 6	Stevenage 3	Hemel Hempstead 5	5-0d
+Mon 27-Apr-2026	Herts CA	Herts League	Division 4	Watford 2	Stevenage 2	3-2
+Mon 27-Apr-2026	Herts CA	U1600 League	Division 2	Stevenage	Hertford 2	2.5-1.5
+Wed 29-Apr-2026	Herts CA	Herts League	Division 6	Little Heath 4	Stevenage 3	1.5-2.5
+Thu 30-Apr-2026	H&D	H&D League	North	Hoddesdon	Stevenage	2-3
 Tue 05-May-2026	Herts CA	Herts League	Division 4	Welwyn Hatfield 2	Stevenage 2	-
 Thu 07-May-2026	H&D	H&D League	North	Bishops Stortford	Stevenage	-
 Mon 11-May-2026	Herts CA	Herts League	Division 1	St Albans 2	Stevenage 1	-
-Mon 11-May-2026	Herts CA	Herts League	Division 6	Stevenage 3	St Albans 8	-
 Mon 18-May-2026	Herts CA	Herts League	Division 1	Stevenage 1	Hemel Hempstead 2	-
 Mon 18-May-2026	Herts CA	U1600 League	Division 2	Hemel Hempstead 2	Stevenage	-
+Mon 01-Jun-2026	Herts CA	Herts League	Division 6	Stevenage 3	St Albans 8	-
