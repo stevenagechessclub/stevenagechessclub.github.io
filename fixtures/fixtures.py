@@ -35,17 +35,6 @@ def get_bank_holidays():
     return dates
 
 
-def get_closed_nights():
-    dates = []
-    year = get_current_season_year()
-    date_time = datetime.datetime(year, 12, 22)
-    while date_time.month != 1:
-        if date_time.weekday() == 0:
-            dates.append(date_time)
-        date_time += datetime.timedelta(7)
-    return dates
-
-
 def get_christmas_blitz_date():
     dates = []
     year = get_current_season_year()
@@ -68,32 +57,48 @@ def add_fixture(fixtures, date_time, column_header, row_entry):
         }
 
 
-def add_club_nights(fixtures, table_format):
+def get_club_events(events_path):
+    events = {}
+    line_number = 1
+    with open(events_path, newline='') as f:
+        reader = csv.reader(f)
+        for row in reader:
+            if len(row) == 2:
+                date_time         = datetime.datetime.strptime(row[0],"%Y-%m-%d")
+                events[date_time] = row[1]
+            else:
+                raise ValueError(f'line {line_number}: badly formatted line {" ".join(row)}')
+            line_number += 1
+    return events
+
+
+def add_club_nights(fixtures, events_path, table_format):
     club_nights          = get_club_nights()
     bank_holidays        = get_bank_holidays()
-    closed_nights        = get_closed_nights()
-    christmas_blitz_date = get_christmas_blitz_date()
+    club_events          = get_club_events(events_path)
+
+    for night in club_events:
+        if night not in club_nights:
+            raise ValueError(f'{night} {club_events[night]} not on a club night')
+        elif night in bank_holidays:
+            raise ValueError(f'{night} {club_events[night]} is on a bank holiday')
 
     for night in club_nights:
         if table_format == 'dates':
-            if night not in bank_holidays and night not in closed_nights:
+            if night not in bank_holidays and not (night in club_events and club_events[night] == 'CLOSED'):
                 add_fixture(fixtures, night, 'CLUB', 'Club Night')
         elif table_format == 'csv' or table_format == 'csv2':
-            if night in bank_holidays:
+            if night in club_events:
+                add_fixture(fixtures, night, 'CLUB', club_events[night])
+            elif night in bank_holidays:
                 add_fixture(fixtures, night, 'CLUB', 'CLOSED')
-            elif night in closed_nights:
-                add_fixture(fixtures, night, 'CLUB', 'CLOSED')
-            elif night == christmas_blitz_date:
-                add_fixture(fixtures, night, 'CLUB', 'Christmas Blitz')
             else:
                 add_fixture(fixtures, night, 'CLUB', '')
         elif table_format == 'md':
-            if night in bank_holidays:
+            if night in club_events:
+                add_fixture(fixtures, night, 'H & D / Other', f'**{club_events[night]}**')
+            elif night in bank_holidays:
                 add_fixture(fixtures, night, 'H & D / Other', '**CLOSED**')
-            elif night in closed_nights:
-                add_fixture(fixtures, night, 'H & D / Other', '**CLOSED**')
-            elif night == christmas_blitz_date:
-                add_fixture(fixtures, night, 'H & D / Other', '**Christmas Blitz**')
             else:
                 add_fixture(fixtures, night, 'PLACEHOLDER', 'Open')
         else:
@@ -235,7 +240,7 @@ def fixtures_to_table(fixtures, columns, table_format):
         fixture = fixtures[date]
         num_fixtures_on_date = 0
         for column in columns:
-            if column in fixture and column not in ['DATE', 'CLUB', 'PLACEHOLDER'] and fixture[column] not in ['CLOSED', 'Christmas Blitz', '**CLOSED**', '**Christmas Blitz**']:
+            if column in fixture and column not in ['DATE', 'CLUB', 'PLACEHOLDER'] and fixture[column] not in ['CLOSED', 'Christmas Blitz', 'AGM', 'Field Trophy', '**CLOSED**', '**Christmas Blitz**', '**AGM**', '**Field Trophy**']:
                 num_fixtures_on_date += 1
         for fixture_key in fixture:
             if fixture_key not in columns and fixture_key not in ['DATE', 'CLUB', 'PLACEHOLDER']:
@@ -263,7 +268,7 @@ def fixtures_to_table(fixtures, columns, table_format):
 
 def print_club_nights():
     fixtures = {}
-    add_club_nights(fixtures, 'dates')
+    add_club_nights(fixtures, './club-events.csv', 'dates')
     fixtures_to_table(fixtures, ['DATE'], 'csv')
 
 
@@ -279,8 +284,7 @@ def print_fixtures_csv():
         'K/O Cups',
         'Herts & District'
     ]
-    add_club_nights(fixtures, 'csv')
-
+    add_club_nights(fixtures, './club-events.csv', 'csv')
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'csv')
     (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'csv')
     if max_fixtures_on_date != 2:
@@ -307,7 +311,7 @@ def print_fixtures_csv2():
         'Herts & District (Home)',
         'Herts & District (Away)'
     ]
-    add_club_nights(fixtures, 'csv2')
+    add_club_nights(fixtures, './club-events.csv', 'csv2')
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'csv2')
     (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'csv2')
     if max_fixtures_on_date != 2:
@@ -325,8 +329,7 @@ def print_fixtures_md():
         '2ND TEAM / U1750 KO',
         '3RD TEAM / U1600'
     ]
-    add_club_nights(fixtures, 'md')
-
+    add_club_nights(fixtures, './club-events.csv', 'md')
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'md')
     (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'md')
     if max_fixtures_on_date != 2:
