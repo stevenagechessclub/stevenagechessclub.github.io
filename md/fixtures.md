@@ -18,3 +18,4 @@ Or the below table where **bold teams** are home fixtures and *italic teams* are
 | Mon 15-Jun-2026 | **Field Trophy** |  |  |  |
 | Mon 22-Jun-2026 |  |  |  |  |
 | Mon 29-Jun-2026 | **AGM** |  |  |  |
+| Tue 07-Jul-2026 | *H&D Blitz* |  |  |  |

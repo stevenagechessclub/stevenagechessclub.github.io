@@ -78,25 +78,35 @@ def add_club_nights(fixtures, events_path, table_format):
     club_events          = get_club_events(events_path)
 
     for night in club_events:
-        if night not in club_nights:
-            raise ValueError(f'{night} {club_events[night]} not on a club night')
-        elif night in bank_holidays:
-            raise ValueError(f'{night} {club_events[night]} is on a bank holiday')
+        if not club_events[night].startswith('H&D '):
+            if night not in club_nights:
+                raise ValueError(f'{night} {club_events[night]} not on a club night')
+            elif night in bank_holidays:
+                raise ValueError(f'{night} {club_events[night]} is on a bank holiday')
 
-    for night in club_nights:
+    for night in sorted(set(club_nights) | set(club_events.keys())):
         if table_format == 'dates':
             if night not in bank_holidays and not (night in club_events and club_events[night] == 'CLOSED'):
                 add_fixture(fixtures, night, 'CLUB', 'Club Night')
         elif table_format == 'csv' or table_format == 'csv2':
             if night in club_events:
-                add_fixture(fixtures, night, 'CLUB', club_events[night])
+                if club_events[night].startswith('H&D '):
+                    if table_format == 'csv':
+                        add_fixture(fixtures, night, 'Herts & District', f'{club_events[night].removeprefix("H&D ")} (Away)')
+                    else:
+                        add_fixture(fixtures, night, 'Herts & District (Away)', club_events[night].removeprefix('H&D '))
+                else:
+                    add_fixture(fixtures, night, 'CLUB', club_events[night])
             elif night in bank_holidays:
                 add_fixture(fixtures, night, 'CLUB', 'CLOSED')
             else:
                 add_fixture(fixtures, night, 'CLUB', '')
         elif table_format == 'md':
             if night in club_events:
-                add_fixture(fixtures, night, 'H & D / Other', f'**{club_events[night]}**')
+                if club_events[night].startswith('H&D '):
+                    add_fixture(fixtures, night, 'H & D / Other', f'*{club_events[night]}*')
+                else:
+                    add_fixture(fixtures, night, 'H & D / Other', f'**{club_events[night]}**')
             elif night in bank_holidays:
                 add_fixture(fixtures, night, 'H & D / Other', '**CLOSED**')
             else:
@@ -240,7 +250,7 @@ def fixtures_to_table(fixtures, columns, table_format):
         fixture = fixtures[date]
         num_fixtures_on_date = 0
         for column in columns:
-            if column in fixture and column not in ['DATE', 'CLUB', 'PLACEHOLDER'] and fixture[column] not in ['CLOSED', 'Christmas Blitz', 'AGM', 'Field Trophy', '**CLOSED**', '**Christmas Blitz**', '**AGM**', '**Field Trophy**']:
+            if column in fixture and column not in ['DATE', 'CLUB', 'PLACEHOLDER'] and fixture[column] not in ['CLOSED', 'Christmas Blitz', 'AGM', 'Field Trophy', '**CLOSED**', '**Christmas Blitz**', '**AGM**', '**Field Trophy**', '*H&D Blitz*', 'Blitz (Away)']:
                 num_fixtures_on_date += 1
         for fixture_key in fixture:
             if fixture_key not in columns and fixture_key not in ['DATE', 'CLUB', 'PLACEHOLDER']:
