@@ -14,6 +14,7 @@ Winners are:
 
 | Year (Season End) | Winner |
 | ----------- | ----------- |
+| 2026 | Derick Price |
 | 2025 | Dominic Robinson |
 | 2024 | Giampiero Amato |
 | 2023 | Ken Maynard |
@@ -70,6 +71,7 @@ Winners are:
 
 | Year (Season End) | Winner |
 | ----------- | ----------- |
+| 2026 | Frank Trethewey, Mike Price and Paolo Butcher |
 | 2025 | Frank Trethewey |
 | 2024 | Steve Rawlings and Patrick Fitzgerald |
 | 2023 | Frank Trethewey |
