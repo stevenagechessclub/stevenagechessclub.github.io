@@ -32,7 +32,7 @@ Stevenage have won this in:
 
 ### Division 2
 
-Division 2 champions are awarded the Montague-Jones Cup.
+Division 2 champions are awarded the Montague-Jones Board & Set.
 
 Stevenage have won this in:
 
