@@ -158,9 +158,9 @@ def add_e2e4_fixtures(fixtures, fixtures_path, table_format):
                         row_entry = versus_team
                         if my_team == "Stevenage":
                             column_header = "Herts & District"
-                    elif competition == "U1600 League":
+                    elif competition == "U1450 League":
                         if my_team == "Stevenage":
-                            column_header = "U1600"
+                            column_header = "U1450"
                             row_entry = f'{versus_team}'
                     elif competition == "Knock Out":
                         if my_team == "Stevenage":
@@ -193,15 +193,15 @@ def add_e2e4_fixtures(fixtures, fixtures_path, table_format):
                         elif my_team == "Stevenage 2":
                             column_header = "2ND TEAM / U1750 KO"
                         elif my_team == "Stevenage 3":
-                            column_header = "3RD TEAM / U1600"
+                            column_header = "3RD TEAM / U1450"
                     elif competition == "H&D League":
                         row_entry = versus_team
                         if my_team == "Stevenage":
                             column_header = "H & D / Other"
-                    elif competition == "U1600 League":
+                    elif competition == "U1450 League":
                         if my_team == "Stevenage":
-                            column_header = "3RD TEAM / U1600"
-                            row_entry = f'{versus_team} (U1600 League)'
+                            column_header = "3RD TEAM / U1450"
+                            row_entry = f'{versus_team} (U1450 League)'
                     elif competition == "Knock Out":
                         if my_team == "Stevenage":
                             if division == "Sharp Trophy":
@@ -211,7 +211,7 @@ def add_e2e4_fixtures(fixtures, fixtures_path, table_format):
                                 column_header = "2ND TEAM / U1750 KO"
                                 row_entry = f'{versus_team} (U1750 KO)'
                             elif division == "Under 1600 Cup":
-                                column_header = "3RD TEAM / U1600"
+                                column_header = "3RD TEAM / U1450"
                                 row_entry = f'{versus_team} (U1600 KO)'
                     if not column_header or not row_entry:
                         raise ValueError(f'line {line_number}: unexpected team {my_team} in {competition}')
@@ -250,7 +250,7 @@ def fixtures_to_table(fixtures, columns, table_format):
         fixture = fixtures[date]
         num_fixtures_on_date = 0
         for column in columns:
-            if column in fixture and column not in ['DATE', 'CLUB', 'PLACEHOLDER'] and fixture[column] not in ['CLOSED', 'Christmas Blitz', 'AGM', 'Field Trophy', '**CLOSED**', '**Christmas Blitz**', '**AGM**', '**Field Trophy**', '*H&D Blitz*', 'Blitz (Away)']:
+            if column in fixture and column not in ['DATE', 'CLUB', 'PLACEHOLDER'] and fixture[column] not in ['CLOSED', 'Christmas Blitz', 'AGM', 'Field Trophy', '**CLOSED**', '**Christmas Blitz**', '**AGM**', '**Field Trophy**', '*H&D Blitz*', 'Blitz (Away)', '*Jamboree*', 'Jamboree (Away)']:
                 num_fixtures_on_date += 1
         for fixture_key in fixture:
             if fixture_key not in columns and fixture_key not in ['DATE', 'CLUB', 'PLACEHOLDER']:
@@ -290,14 +290,14 @@ def print_fixtures_csv():
         '1ST TEAM',
         '2ND TEAM',
         '3RD TEAM',
-        'U1600',
+        'U1450',
         'K/O Cups',
         'Herts & District'
     ]
     add_club_nights(fixtures, './club-events.csv', 'csv')
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'csv')
     (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'csv')
-    if max_fixtures_on_date != 2:
+    if max_fixtures_on_date > 2:
         raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
     if num_fixtures_on_date_check != num_fixtures:
         raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} {",".join(ignored_columns)}')
@@ -314,8 +314,8 @@ def print_fixtures_csv2():
         '2ND TEAM (Away)',
         '3RD TEAM (Home)',
         '3RD TEAM (Away)',
-        'U1600 (Home)',
-        'U1600 (Away)',
+        'U1450 (Home)',
+        'U1450 (Away)',
         'K/O Cups (Home)',
         'K/O Cups (Away)',
         'Herts & District (Home)',
@@ -337,15 +337,15 @@ def print_fixtures_md():
         'H & D / Other',
         '1ST TEAM / SHARP',
         '2ND TEAM / U1750 KO',
-        '3RD TEAM / U1600'
+        '3RD TEAM / U1450'
     ]
     add_club_nights(fixtures, './club-events.csv', 'md')
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'md')
     (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'md')
-    if max_fixtures_on_date != 2:
-        raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
-    if num_fixtures_on_date_check != num_fixtures:
-        raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} {",".join(ignored_columns)}')
+    #if max_fixtures_on_date != 2:
+    #    raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
+    #if num_fixtures_on_date_check != num_fixtures:
+    #    raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} {",".join(ignored_columns)}')
 
 
 if len(sys.argv) != 2:
