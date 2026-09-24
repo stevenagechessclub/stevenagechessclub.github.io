@@ -19,7 +19,8 @@ subsequent Knockout rounds are still to be scheduled.
 | Mon 12-Oct-2026 |  |  | *St Albans 5* | **St Albans (U1450 League)** |
 | Mon 19-Oct-2026 |  | *Royston* |  | **Little Heath 3** |
 | Tue 20-Oct-2026 |  |  |  | *Hertford (U1450 League)* |
-| Mon 26-Oct-2026 |  | **Borehamwood** | **Hertford (U1750 KO)** |  |
+| Mon 26-Oct-2026 |  |  | **Hertford (U1750 KO)** |  |
+| Tue 27-Oct-2026 |  | *Borehamwood* |  |  |
 | Mon 02-Nov-2026 |  |  | **Letchworth & Hitchin 3** | *Harpenden & Rothamsted (U1600 KO)* |
 | Mon 09-Nov-2026 |  | *Watford 1* |  | **Little Heath (U1450 League)** |
 | Tue 10-Nov-2026 | *Hertford* |  |  |  |
@@ -40,8 +41,7 @@ subsequent Knockout rounds are still to be scheduled.
 | Mon 08-Feb-2027 |  |  | *Letchworth & Hitchin 3* |  |
 | Mon 15-Feb-2027 |  |  | **St Albans 5** | **Harpenden & Rothamsted (U1450 League)** |
 | Tue 16-Feb-2027 |  |  |  | *Hertford 4* |
-| Mon 22-Feb-2027 |  |  |  |  |
-| Tue 23-Feb-2027 |  | *Borehamwood* |  |  |
+| Mon 22-Feb-2027 |  | **Borehamwood** |  |  |
 | Thu 25-Feb-2027 | *Bishops Stortford* |  |  |  |
 | Mon 01-Mar-2027 |  |  |  | **St Albans 8** |
 | Mon 08-Mar-2027 |  | *St Albans 3* |  |  |

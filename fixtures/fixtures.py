@@ -235,6 +235,7 @@ def fixtures_to_table(fixtures, columns, table_format):
     num_fixtures = 0
     max_fixtures_on_date = 0
     ignored_columns = []
+    debug = []
     if table_format == 'md':
         dashes = []
         for column in columns:
@@ -250,7 +251,8 @@ def fixtures_to_table(fixtures, columns, table_format):
         fixture = fixtures[date]
         num_fixtures_on_date = 0
         for column in columns:
-            if column in fixture and column not in ['DATE', 'CLUB', 'PLACEHOLDER'] and fixture[column] not in ['CLOSED', 'Christmas Blitz', 'AGM', 'Field Trophy', '**CLOSED**', '**Christmas Blitz**', '**AGM**', '**Field Trophy**', '*H&D Blitz*', 'Blitz (Away)', '*Jamboree*', 'Jamboree (Away)']:
+            if column in fixture and column not in ['DATE', 'CLUB', 'PLACEHOLDER'] and fixture[column] not in ['CLOSED', 'Christmas Blitz', 'AGM', 'Field Trophy', '**CLOSED**', '**Christmas Blitz**', '**AGM**', '**Field Trophy**', '*H&D Blitz*', 'Blitz (Away)', 'Jamboree', 'Jamboree (Away)', '*H&D Jamboree*']:
+                debug.append(f'{column}={fixture[column]}')
                 num_fixtures_on_date += 1
         for fixture_key in fixture:
             if fixture_key not in columns and fixture_key not in ['DATE', 'CLUB', 'PLACEHOLDER']:
@@ -273,7 +275,7 @@ def fixtures_to_table(fixtures, columns, table_format):
                 print(f'| {" | ".join(row)} |')
             elif table_format == 'csv' or table_format == 'csv2':
                 print(','.join(row))
-    return (num_fixtures, max_fixtures_on_date, ignored_columns)
+    return (num_fixtures, max_fixtures_on_date, ignored_columns, debug)
 
 
 def print_club_nights():
@@ -283,6 +285,7 @@ def print_club_nights():
 
 
 def print_fixtures_csv():
+    debug = []
     fixtures = {}
     column_headings = [
         'DATE',
@@ -296,14 +299,15 @@ def print_fixtures_csv():
     ]
     add_club_nights(fixtures, './club-events.csv', 'csv')
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'csv')
-    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'csv')
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns, debug) = fixtures_to_table(fixtures, column_headings, 'csv')
     if max_fixtures_on_date > 2:
         raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
     if num_fixtures_on_date_check != num_fixtures:
-        raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} {",".join(ignored_columns)}')
+        raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} [{",".join(ignored_columns)}] {",".join(debug)}')
 
 
 def print_fixtures_csv2():
+    debug = []
     fixtures = {}
     column_headings = [
         'DATE',
@@ -323,14 +327,15 @@ def print_fixtures_csv2():
     ]
     add_club_nights(fixtures, './club-events.csv', 'csv2')
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'csv2')
-    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'csv2')
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns, debug) = fixtures_to_table(fixtures, column_headings, 'csv2')
     if max_fixtures_on_date != 2:
         raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
     if num_fixtures_on_date_check != num_fixtures:
-        raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} {",".join(ignored_columns)}')
+        raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} [{",".join(ignored_columns)}] {",".join(debug)}')
 
 
 def print_fixtures_md():
+    debug = []
     fixtures = {}
     column_headings = [
         'DATE',
@@ -341,11 +346,11 @@ def print_fixtures_md():
     ]
     add_club_nights(fixtures, './club-events.csv', 'md')
     (unique_columns, num_fixtures) = add_e2e4_fixtures(fixtures, './fixtures.txt', 'md')
-    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns) = fixtures_to_table(fixtures, column_headings, 'md')
-    #if max_fixtures_on_date != 2:
-    #    raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
-    #if num_fixtures_on_date_check != num_fixtures:
-    #    raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} {",".join(ignored_columns)}')
+    (num_fixtures_on_date_check, max_fixtures_on_date, ignored_columns, debug) = fixtures_to_table(fixtures, column_headings, 'md')
+    if max_fixtures_on_date != 2:
+        raise ValueError(f'failed max fixtures on date check {max_fixtures_on_date}')
+    if num_fixtures_on_date_check != num_fixtures:
+        raise ValueError(f'failed fixture count check {num_fixtures_on_date_check} {num_fixtures} [{",".join(ignored_columns)}] {",".join(debug)}')
 
 
 if len(sys.argv) != 2:
