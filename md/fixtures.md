@@ -10,12 +10,6 @@ subsequent Knockout rounds are still to be scheduled.
 
 | DATE | H & D / Other | 1ST TEAM / SHARP | 2ND TEAM / U1750 KO | 3RD TEAM / U1450 |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| Mon 07-Sep-2026 |  |  |  |  |
-| Tue 08-Sep-2026 | *H&D Jamboree* |  |  |  |
-| Mon 14-Sep-2026 |  |  |  |  |
-| Mon 21-Sep-2026 |  |  |  |  |
-| Mon 28-Sep-2026 |  |  |  |  |
-| Mon 05-Oct-2026 |  |  |  | *Hemel Hempstead 5* |
 | Mon 12-Oct-2026 |  |  | *St Albans 5* | **St Albans (U1450 League)** |
 | Mon 19-Oct-2026 |  | *Royston* |  | **Little Heath 3** |
 | Tue 20-Oct-2026 |  |  |  | *Hertford (U1450 League)* |
